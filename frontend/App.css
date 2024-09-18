@@ -99,7 +99,34 @@
     background-color: transparent; /* Background to create hollow effect */
     border-radius: 50%;
 }
+.right-image {
+  position: absolute; /* Keeps the image in a fixed position */
+  right: 0px; /* Aligns the image to the left */
+  top: 110px; /* Aligns the image to the top */
+  height: 125px; /* Optional: Make the image as tall as the viewport */
+  width: 150px; /* Maintain the aspect ratio of the image */
+  background-color: rgb(87, 87, 153);
+  padding: 20px;
+}
 
+.right-image-second {
+  position: absolute; /* Keeps the image in a fixed position */
+  right: 0px; /* Aligns the image to the left */
+  top: 235px; /* Aligns the image to the top */
+  height: 100px; /* Optional: Make the image as tall as the viewport */
+  width: 150px; /* Maintain the aspect ratio of the image */
+  background-color: rgb(87, 87, 153);
+  padding: 20px;
+}
+.right-image-last {
+  position: absolute; /* Keeps the image in a fixed position */
+  right: 0px; /* Aligns the image to the left */
+  top: 360px; /* Aligns the image to the top */
+  height: 100px; /* Optional: Make the image as tall as the viewport */
+  width: 150px; /* Maintain the aspect ratio of the image */
+  background-color: rgb(87, 87, 153);
+  padding: 20px;
+}
 /* Position textbox */
 .textbox{
   position: absolute;
@@ -113,3 +140,4 @@
   right: 25%;
   top: 80%;
 }
+
