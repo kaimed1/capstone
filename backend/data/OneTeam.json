@@ -1,0 +1,1380 @@
+{
+  "teams": [
+    {
+      "name": "Michigan State Spartans",
+      "league": "Big Ten Conference",
+      "schedule": [
+        {
+          "index": "0",
+          "timestamp": "08/26/2023",
+          "dayOfWeek": "Sat",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "08/27/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "08/28/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "08/29/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "08/30/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "08/31/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/01/2023",
+          "dayOfWeek": "Fri",
+          "location": "vs.",
+          "opponent": "Central Michigan Chippewas",
+          "outcome": "W",
+          "pointsScored": "31",
+          "pointsAllowed": "7"
+        },
+        {
+          "index": "0",
+          "timestamp": "09/02/2023",
+          "dayOfWeek": "Sat",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/03/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/04/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/05/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/06/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/07/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/08/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/09/2023",
+          "dayOfWeek": "Sat",
+          "location": "vs.",
+          "opponent": "Richmond Spiders",
+          "outcome": "W",
+          "pointsScored": "45",
+          "pointsAllowed": "14"
+        },
+        {
+          "index": "0",
+          "timestamp": "09/10/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/11/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/12/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/13/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/14/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/15/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/16/2023",
+          "dayOfWeek": "Sat",
+          "location": "vs.",
+          "opponent": "Washington Huskies",
+          "outcome": "L",
+          "pointsScored": "7",
+          "pointsAllowed": "41"
+        },
+        {
+          "index": "0",
+          "timestamp": "09/17/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/18/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/19/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/20/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/21/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/22/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/23/2023",
+          "dayOfWeek": "Sat",
+          "location": "vs.",
+          "opponent": "Maryland Terrapins",
+          "outcome": "L",
+          "pointsScored": "9",
+          "pointsAllowed": "31"
+        },
+        {
+          "index": "0",
+          "timestamp": "09/24/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/25/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/26/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/27/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/28/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/29/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "09/30/2023",
+          "dayOfWeek": "Sat",
+          "location": "@",
+          "opponent": "Iowa Hawkeyes",
+          "outcome": "L",
+          "pointsScored": "16",
+          "pointsAllowed": "26"
+        },
+        {
+          "index": "0",
+          "timestamp": "10/01/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/02/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/03/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/04/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/05/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/06/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/07/2023",
+          "dayOfWeek": "Sat",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/08/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/09/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/10/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/11/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/12/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/13/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/14/2023",
+          "dayOfWeek": "Sat",
+          "location": "@",
+          "opponent": "Rutgers Scarlet Knights",
+          "outcome": "L",
+          "pointsScored": "24",
+          "pointsAllowed": "27"
+        },
+        {
+          "index": "0",
+          "timestamp": "10/15/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/16/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/17/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/18/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/19/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/20/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/21/2023",
+          "dayOfWeek": "Sat",
+          "location": "vs.",
+          "opponent": "Michigan Wolverines",
+          "outcome": "L",
+          "pointsScored": "0",
+          "pointsAllowed": "49"
+        },
+        {
+          "index": "0",
+          "timestamp": "10/22/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/23/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/24/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/25/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/26/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/27/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/28/2023",
+          "dayOfWeek": "Sat",
+          "location": "@",
+          "opponent": "Minnesota Golden Gophers",
+          "outcome": "L",
+          "pointsScored": "12",
+          "pointsAllowed": "27"
+        },
+        {
+          "index": "0",
+          "timestamp": "10/29/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/30/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "10/31/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/01/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/02/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/03/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/04/2023",
+          "dayOfWeek": "Sat",
+          "location": "vs.",
+          "opponent": "Nebraska Cornhuskers",
+          "outcome": "W",
+          "pointsScored": "20",
+          "pointsAllowed": "17"
+        },
+        {
+          "index": "0",
+          "timestamp": "11/05/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/06/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/07/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/08/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/09/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/10/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/11/2023",
+          "dayOfWeek": "Sat",
+          "location": "@",
+          "opponent": "Ohio State Buckeyes",
+          "outcome": "L",
+          "pointsScored": "3",
+          "pointsAllowed": "38"
+        },
+        {
+          "index": "0",
+          "timestamp": "11/12/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/13/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/14/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/15/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/16/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/17/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/18/2023",
+          "dayOfWeek": "Sat",
+          "location": "@",
+          "opponent": "Indiana Hoosiers",
+          "outcome": "W",
+          "pointsScored": "24",
+          "pointsAllowed": "21"
+        },
+        {
+          "index": "0",
+          "timestamp": "11/19/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/20/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/21/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/22/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/23/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/24/2023",
+          "dayOfWeek": "Fri",
+          "location": "vs.",
+          "opponent": "Penn State Nittany Lions",
+          "outcome": "L",
+          "pointsScored": "0",
+          "pointsAllowed": "42"
+        },
+        {
+          "index": "0",
+          "timestamp": "11/25/2023",
+          "dayOfWeek": "Sat",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/26/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/27/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/28/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/29/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "11/30/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/01/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/02/2023",
+          "dayOfWeek": "Sat",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/03/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/04/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/05/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/06/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/07/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/08/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/09/2023",
+          "dayOfWeek": "Sat",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/10/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/11/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/12/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/13/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/14/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/15/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/16/2023",
+          "dayOfWeek": "Sat",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/17/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/18/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/19/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/20/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/21/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/22/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/23/2023",
+          "dayOfWeek": "Sat",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/24/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/25/2023",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/26/2023",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/27/2023",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/28/2023",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/29/2023",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/30/2023",
+          "dayOfWeek": "Sat",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "12/31/2023",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "01/01/2024",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "01/02/2024",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "01/03/2024",
+          "dayOfWeek": "Wed",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "01/04/2024",
+          "dayOfWeek": "Thu",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "01/05/2024",
+          "dayOfWeek": "Fri",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "01/06/2024",
+          "dayOfWeek": "Sat",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "01/07/2024",
+          "dayOfWeek": "Sun",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "01/08/2024",
+          "dayOfWeek": "Mon",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        },
+        {
+          "index": "0",
+          "timestamp": "01/09/2024",
+          "dayOfWeek": "Tue",
+          "location": "BYE",
+          "opponent": "",
+          "outcome": "",
+          "pointsScored": "",
+          "pointsAllowed": ""
+        }
+      ]
+    }
+  ]
+}
