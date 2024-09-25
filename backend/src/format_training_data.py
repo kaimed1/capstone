@@ -1,12 +1,12 @@
 import csv
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime
 
 # Global Variables
 input_schedule = '../data/Schedule.csv'
 output_schedule = '../data/Training_Schedule.csv'
 
-# Function for inital restructing of the schedule data
+# Function for custom restructuring of the schedule data
 def format_schedule_data(input_schedule, output_schedule):
     print("Performing an initial restructuring of the data...")
     teams = []
@@ -20,21 +20,21 @@ def format_schedule_data(input_schedule, output_schedule):
             if not row or row == [',,,,,,']:
                 continue
 
-            # Check for data lines (assuming they start with '0')
+            # If the first column is a digit and equals '0', it indicates a game line
             if row[0].isdigit() and row[0] == '0':
                 if current_team is not None:
-                    # Add columns: team name, conference, and data columns
+                    # Parse game data
                     date = row[1]
                     day = row[2]
                     location = row[3]
                     opponent = row[4]
                     result = row[5]
-                    team_score = row[6]
-                    opp_score = row[7]
-                    new_row = [current_team, current_conference, date, day,
-                               location, opponent, result, team_score, opp_score]
+                    team_score = row[6] if row[6] else 0
+                    opp_score = row[7] if row[7] else 0
+                    new_row = [current_team, current_conference, date, day, location, opponent, result, team_score, opp_score]
                     teams.append(new_row)
             else:
+                # Parse team and conference names
                 current_team = row[0]
                 current_conference = row[1]
 
@@ -42,71 +42,25 @@ def format_schedule_data(input_schedule, output_schedule):
     with open(output_schedule, 'w', newline='') as outfile:
         writer = csv.writer(outfile)
         # Write the header (add columns for team name, conference, and data)
-        writer.writerow(['Team', 'Conference', 'Date', 'Day', 'Location',
-                        'Opponent', 'Result', 'Score', 'Opponent Score'])
+        writer.writerow(['Team', 'Conference', 'Date', 'Day', 'Location', 'Opponent', 'Result', 'Score', 'Opponent Score'])
         # Write the rows
         writer.writerows(teams)
 
-
-# Format Dataframe
+# Format DataFrame
 def format_dataframe(df):
     print("Formatting the dates...")
-    # Reformat date
     df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y')
-    
+
+    # Drop Conference column
+    df = df.drop('Conference', axis=1)
+
     print("Sorting by team and date...")
-    # Sort by team, date
     df = df.sort_values(['Team', 'Date'])
 
     return df
 
-# Change 'location' to 'Home' or 'Away'
-def format_location(df):
-    print("Formatting location...")
-    df['Location'] = df['Location'].apply(lambda x: 'Home' if x == 'vs.' else 'Away')
-
-    return df
-
-# Calculate the running average score
-def calc_running_avg_score(df):
-    print("Calculating running average score...")
-    df['Score'] = df['Score'].astype(int)
-    df['RunningAvgScore'] = df.groupby('Team')['Score'].transform(lambda x: x.expanding().mean())
-
-    return df
-
-
-# Calculate the win rate for each team
-def calc_win_rate(df):
-    print("Calculating win rate...")
-    df['Home_Win_Rate'] = df[df['Location'] == 'Home'].groupby(
-        'Team')['Result'].transform(lambda x: x.eq('W').cumsum() / x.expanding().count())      
-    df['Away_Win_Rate'] = df[df['Location'] == 'Away'].groupby(
-        'Team')['Result'].transform(lambda x: x.eq('W').cumsum() / x.expanding().count())
-    
-    # Forward fill the win rates to fill NaN values
-    df['Home_Win_Rate'] = df.groupby('Team')['Home_Win_Rate'].ffill()
-    df['Away_Win_Rate'] = df.groupby('Team')['Away_Win_Rate'].ffill()
-    
-    # Backward fill the win rates to fill NaN values at the beginning
-    df['Home_Win_Rate'] = df.groupby('Team')['Home_Win_Rate'].bfill()
-    df['Away_Win_Rate'] = df.groupby('Team')['Away_Win_Rate'].bfill()
-
-    return df
-
-
-# Calculate the running total of wins/losses
-def calc_win_loss(df):
-    print("Calculating running total of wins and losses...")
-    df['Wins'] = df.groupby('Team')['Result'].transform(
-        lambda x: x.eq('W').cumsum())
-    df['Losses'] = df.groupby('Team')['Result'].transform(
-        lambda x: x.eq('L').cumsum())
-    
-    return df
-
-# Calculate Bye Weeks
-def calculate_bye_weeks(df):
+# Remove bye weeks and non-game days (like extra days during the week)
+def remove_bye_weeks_and_extra_days(df):
     print("Calculating bye weeks...")
     # Initialize 'PrevWeekBYE' column with False
     df['PrevWeekBYE'] = 0
@@ -138,82 +92,109 @@ def calculate_bye_weeks(df):
     # Remove any rows with 'BYE' in the 'Location' column
     df = df[df['Location'] != 'BYE']
 
+    # Drop Day
+    df = df.drop('Day', axis=1)
+
     return df
 
-# Calculate and merge opponent stats
-def calc_opponent_stats(df):
-    print("Merging opponent stats...")
-    # Rename columns to reflect opponent stats and avoid any naming conflicts
-    opponent_df = df.rename(columns={
-        'Team': 'Opponent_Team',  # Rename 'Team' to 'Opponent_Team'
-        'RunningAvgScore': 'Opponent_RunningAvgScore',
-        'Wins': 'Opponent_Wins',
-        'Losses': 'Opponent_Losses',
-        'Home_Win_Rate': 'Opponent_Home_Win_Rate',
-        'Away_Win_Rate': 'Opponent_Away_Win_Rate',
-    })
+# Add a column to track if the previous week was a bye week
+def calculate_bye_weeks(df):
+    print("Calculating bye weeks...")
+    df['PrevWeekBYE'] = 0  # Initialize the column with 0
 
-    # Drop unnecessary columns to avoid duplication (especially the original 'Opponent' column)
-    opponent_df = opponent_df[['Opponent_Team', 'Date',
-                            'Opponent_RunningAvgScore', 'Opponent_Wins',
-                            'Opponent_Losses', 'Opponent_Home_Win_Rate',
-                            'Opponent_Away_Win_Rate']]
+    for team, group in df.groupby('Team'):
+        prev_week_bye = 0  # Track if the previous week was a bye
+        prev_week = None
 
+        for week_start, week_data in group.groupby(pd.Grouper(key='Date', freq='W-SAT')):
+            if prev_week is not None:
+                if (prev_week['Location'] == 'BYE').all():
+                    prev_week_bye = 1
+                else:
+                    prev_week_bye = 0
+                # Update 'PrevWeekBYE' for the current week
+                df.loc[week_data.index, 'PrevWeekBYE'] = prev_week_bye
+            prev_week = week_data
 
-    # Merge the opponent data back into the main DataFrame
-    merged_df = pd.merge(df, opponent_df, how='left',
-                        left_on=['Opponent', 'Date'],
-                        right_on=['Opponent_Team', 'Date'])
+    return df
 
-    # Drop the 'Opponent_Team' column since it's redundant
-    merged_df = merged_df.drop('Opponent_Team', axis=1)
+# Transform 'Location' to binary HomeTeamAdvantage
+def format_location(df):
+    print("Formatting location to HomeTeamAdvantage...")
+    df['HomeTeamAdvantage'] = df['Location'].apply(lambda x: 1 if x == 'vs.' else 0)
+    df = df.drop('Location', axis=1)  # Remove the original 'Location' column
+    return df
 
-    # Backfill the opponent stats to fill NaN values
-    opponent_stats = ['Opponent_RunningAvgScore', 'Opponent_Wins', 'Opponent_Losses',
-                    'Opponent_Home_Win_Rate', 'Opponent_Away_Win_Rate']
-    merged_df[opponent_stats] = merged_df.groupby('Team')[opponent_stats].bfill()
+# Calculate running average score for each team
+def calc_running_avg_score(df):
+    print("Calculating running average score...")
+    df['Score'] = df['Score'].astype(int)
+    df['RunningAvgScore'] = df.groupby('Team')['Score'].transform(lambda x: x.expanding().mean())
+    return df
 
-    # Forward fill the opponent stats to fill NaN values at the beginning
-    merged_df[opponent_stats] = merged_df.groupby('Team')[opponent_stats].ffill()
+# Calculate win rate for home and away games
+def calc_win_rate(df, separate_home_away=True):
+    print("Calculating win rates...")
+    if separate_home_away:
+        # Calculate win rate for home and away games
+        df['Home_Win_Rate'] = df[df['HomeTeamAdvantage'] == 1].groupby('Team')['Result'].transform(lambda x: x.eq('W').cumsum() / x.expanding().count())
+        df['Away_Win_Rate'] = df[df['HomeTeamAdvantage'] == 0].groupby('Team')['Result'].transform(lambda x: x.eq('W').cumsum() / x.expanding().count())
+        # Fill NaN values forward and backward
+        df['Home_Win_Rate'] = df.groupby('Team')['Home_Win_Rate'].ffill().bfill()
+        df['Away_Win_Rate'] = df.groupby('Team')['Away_Win_Rate'].ffill().bfill()
+    else:
+        # Calculate a single win rate
+        df['Win_Rate'] = df.groupby('Team')['Result'].transform(lambda x: x.eq('W').cumsum() / x.expanding().count())
+        # Fill NaN values
+        df['Win_Rate'] = df.groupby('Team')['Win_Rate'].ffill().bfill()
 
-    # Reorder columns for better readability
-    merged_df = merged_df[['Date', 'Day', 'Location', 'Conference', 'Team', 'PrevWeekBYE', 'RunningAvgScore', 'Wins', 'Losses',
-                        'Home_Win_Rate', 'Away_Win_Rate', 'Opponent', 'Opponent_RunningAvgScore', 'Opponent_Wins', 'Opponent_Losses',
-                        'Opponent_Home_Win_Rate', 'Opponent_Away_Win_Rate', 'Result', 'Score', 'Opponent Score']]
+    return df
 
-    # Fill any remaining NaN values with 0 for good measure
-    merged_df.fillna(0, inplace=True)
-
-    return merged_df
+# Calculate running total of wins and losses for each team
+def calc_win_loss(df):
+    print("Calculating running total of wins and losses...")
+    df['Wins'] = df.groupby('Team')['Result'].transform(lambda x: x.eq('W').cumsum())
+    df['Losses'] = df.groupby('Team')['Result'].transform(lambda x: x.eq('L').cumsum())
+    return df
 
 # Save df to a csv
 def save_df(df):
-    print("Data created successfully! Saving to " + output_schedule)
-    df.to_csv(output_schedule)
+    print("Saving transformed data to " + output_schedule)
+    df.to_csv(output_schedule, index=False)
 
-# Calculate data from original schedule
-# IMPORTANT: These functions must be called in this order
-def calc_schedule_data(df):
+# Main function to process the schedule data
+def calc_schedule_data(df, separate_home_away=True):
     df = format_dataframe(df)
-    df = calculate_bye_weeks(df)
+    df = remove_bye_weeks_and_extra_days(df)  # Remove bye weeks and extra days
+    df = calculate_bye_weeks(df)  # Add the 'PrevWeekBYE' column
     df = format_location(df)
     df = calc_running_avg_score(df)
     df = calc_win_loss(df)
-    df = calc_win_rate(df)
-    df = calc_opponent_stats(df)
-
+    df = calc_win_rate(df, separate_home_away=separate_home_away)
     return df
 
-def create_new_training_dataset():
+def create_new_training_dataset(separate_home_away=True):
     format_schedule_data(input_schedule, output_schedule)
     df = pd.read_csv(output_schedule)
-    df = calc_schedule_data(df)
+    df = calc_schedule_data(df, separate_home_away=separate_home_away)
+
+    # Reorder columns
+    df= df[[ 'Date', 'Team', 'Opponent', 'Result', 'Score', 'Opponent Score', 'HomeTeamAdvantage', 'PrevWeekBYE', 'RunningAvgScore', 'Wins', 'Losses', 'Home_Win_Rate', 'Away_Win_Rate']]
+    
+    # Create a new column to consistently order team and opponent names
+    df['GamePair'] = df.apply(lambda x: '_'.join(sorted([x['Team'], x['Opponent']])), axis=1)
+
+    # Sort by Date and GamePair
+    df = df.sort_values(by=['Date', 'GamePair'])
+
+    # Drop the temporary GamePair column if you don't need it
+    df = df.drop(columns=['GamePair'])
+    
     save_df(df)
 
 def main():
-    create_new_training_dataset()
-    
+    # Set 'separate_home_away' to False if you want a single running win rate
+    create_new_training_dataset(separate_home_away=True)
 
 if __name__ == "__main__":
     main()
-
