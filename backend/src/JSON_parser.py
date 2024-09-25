@@ -1,5 +1,6 @@
 import json
 import pandas as pd
+import sqlite3 as sql
 from enum import Enum
 
 Site = Enum('Site', ['Home', 'Away', 'Neutral', 'InvalidSite'], start=0)
@@ -76,7 +77,9 @@ def GetSchedules(file_path):
         total_points_for = 0
         total_points_against = 0
         total_point_diff = 0
-        
+        average_point_diff = 0
+        wins = 0
+        losses = 0
 
         for i, game in enumerate(team['schedule']):
             if game['location'] != 'BYE':
@@ -95,41 +98,52 @@ def GetSchedules(file_path):
                 total_point_diff = point_diff
                 average_points_for = round(total_points_for / game_count, 1)
                 average_points_against = round(total_points_against / game_count, 1)
+                previous_diff = average_point_diff
                 average_point_diff = round(total_point_diff / game_count, 1)
-
-
-                record[1 - outcome.value] += 1
+                if outcome == Outcome.W:
+                    wins += 1
+                else:
+                    losses += 1
                 
                 table_data.append({
-                    'Team Name': name,
+                    'Team_Name': name,
                     'Conference': league,
                     'Date': date,
-                    'Day of Week': day,
+                    'Day_of_Week': day,
                     'Location': site,
                     'Opponent': opponent,
                     'Outcome': outcome.name,
-                    'Points For': points_for,
-                    'Points Against': points_against,
-                    'Point Differential': point_diff,
-                    'Total Points For': total_points_for,
-                    'Total Points Against': total_points_against,
-                    'Total Point Diff': total_point_diff,
-                    'Average Points For': average_points_for,
-                    'Average Points Against': average_points_against,
-                    'Average Point Diff': average_point_diff,
-                    'Record': record.copy()
+                    'Points_For': points_for,
+                    'Points_Against': points_against,
+                    'Point_Differential': point_diff,
+                    'Total_Points_For': total_points_for,
+                    'Total_Points_Against': total_points_against,
+                    'Total_Point_Diff': total_point_diff,
+                    'Average_Points_For': average_points_for,
+                    'Average_Points_Against': average_points_against,
+                    'Previous_Average_Point_Diff': previous_diff,
+                    'New_Average_Point_Diff': average_point_diff,
+                    'Wins': wins,
+                    'Losses': losses
                 })
 
     # Create a DataFrame from the table data
     df = pd.DataFrame(table_data)
 
     # Print the table
-    print(df)
+    #print(df)
     return df
 
 def main():
-    schedule_path = 'backend/data/OneTeam.json'
-    GetSchedules(schedule_path)
+    conn = sql.connect('backend/data/schedules.db')
+    
+    schedule_path = 'backend/data/Schedule.json'
+    
+    scheudles = GetSchedules(schedule_path)
+
+    scheudles.to_sql('teams', conn, if_exists='replace', index=False)
+
+    conn.close()
 
 if __name__ == "__main__":
     main()
