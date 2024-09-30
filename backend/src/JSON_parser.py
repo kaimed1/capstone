@@ -98,8 +98,8 @@ def GetSchedules(file_path):
                 total_point_diff = point_diff
                 average_points_for = round(total_points_for / game_count, 1)
                 average_points_against = round(total_points_against / game_count, 1)
-                previous_diff = average_point_diff
                 average_point_diff = round(total_point_diff / game_count, 1)
+
                 if outcome == Outcome.W:
                     wins += 1
                 else:
@@ -110,6 +110,7 @@ def GetSchedules(file_path):
                     'Conference': league,
                     'Date': date,
                     'Day_of_Week': day,
+                    'Game_Number': game_count,
                     'Location': site,
                     'Opponent': opponent,
                     'Outcome': outcome.name,
@@ -121,8 +122,7 @@ def GetSchedules(file_path):
                     'Total_Point_Diff': total_point_diff,
                     'Average_Points_For': average_points_for,
                     'Average_Points_Against': average_points_against,
-                    'Previous_Average_Point_Diff': previous_diff,
-                    'New_Average_Point_Diff': average_point_diff,
+                    'Average_Point_Diff': average_point_diff,
                     'Wins': wins,
                     'Losses': losses
                 })
