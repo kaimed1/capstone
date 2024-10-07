@@ -1,3 +1,4 @@
+/* Aligns all text to the center*/
 .App {
   text-align: center;
 }
@@ -24,58 +25,62 @@
 /* Creates head banner */
 .header-text {
   background-color: rgb(3, 3, 35); 
-  color: white; /* Text color */
-  font-size: 40px; /* Adjust the size as needed */
-  text-align: center; /* Center the text horizontally */
-  padding: 10px; /* Add some padding for space around the text */
-  font-weight: bold; /* Make the text bold */
-  position: absolute; /* Fixes the bar to the top of the viewport */
-  top: 0; /* Aligns the bar to the top of the page */
-  width: 100%; /* Makes the bar span the full width of the viewport */
-  z-index: 1000; /* Ensures the bar stays on top of other content */
+  color: white; 
+  font-size: 40px; 
+  text-align: center; 
+  padding: 10px; 
+  font-weight: bold; 
+  position: absolute; 
+  top: 0; /
+  width: 100%; 
+  z-index: 1000; 
   width: 100%;
   text-shadow: 
-    2px 2px 0px #000000, /* Shadow 1 (black) */
-    4px 4px 0px #888888, /* Shadow 2 (gray) */
-    6px 6px 0px #444444; /* Shadow 3 (darker gray) */
-  
+    2px 2px 0px #000000, 
+    4px 4px 0px #888888, 
+    6px 6px 0px #444444; 
 }
 
+/* styling for an image on the website*/
 .left-image {
   position: absolute; /* Keeps the image in a fixed position */
-  left: 0px; /* Aligns the image to the left */
-  top: 110px; /* Aligns the image to the top */
-  height: 100px; /* Optional: Make the image as tall as the viewport */
-  width: 150px; /* Maintain the aspect ratio of the image */
+  left: 0px; 
+  top: 110px; 
+  height: 100px;
+  width: 150px; 
   background-color: rgb(130, 39, 39);
   padding: 20px;
 }
 
+/* styling for the an image on the website*/
 .left-image-second {
-  position: absolute; /* Keeps the image in a fixed position */
-  left: 0px; /* Aligns the image to the left */
-  top: 235px; /* Aligns the image to the top */
-  height: 100px; /* Optional: Make the image as tall as the viewport */
-  width: 150px; /* Maintain the aspect ratio of the image */
+  position: absolute; 
+  left: 0px; 
+  top: 235px; 
+  height: 100px; 
+  width: 150px; 
   background-color:  rgb(130, 39, 39);
   padding: 20px;
 }
 
+/* styling for the left image on the website*/
 .left-image-last {
-  position: absolute; /* Keeps the image in a fixed position */
-  left: 0px; /* Aligns the image to the left */
-  top: 360px; /* Aligns the image to the top */
-  height: 100px; /* Optional: Make the image as tall as the viewport */
-  width: 150px; /* Maintain the aspect ratio of the image */
+  position: absolute; 
+  left: 0px; 
+  top: 360px; 
+  height: 100px; 
+  width: 150px; 
   background-color:  rgb(130, 39, 39);
   padding: 20px;
 }
+
+/* styling for the an image on the website*/
 .center-image{
-    position: absolute; /* Keeps the image in a fixed position */
-    left: 40%; /* Aligns the image to the left */
-    top: 36%; /* Aligns the image to the top */
-    height: 200px; /* Optional: Make the image as tall as the viewport */
-    width: 250px; /* Maintain the aspect ratio of the image */
+    position: absolute; 
+    left: 40%; 
+    top: 36%; 
+    height: 200px; 
+    width: 250px; 
     rotate: 90deg;
   }
 
@@ -85,45 +90,36 @@
     height: 300px;
     border-radius: 50%; /* Makes it a circle */
     background: linear-gradient(90deg, rgb(130, 39, 39)50%, rgb(87, 87, 153) 50%); /* Red to blue gradient */
-    position: relative;
-}
-
-/* Creates circle around football in center*/
-.hollow-circle::before {
-    content: '';
     position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 200px; /* Adjust to create hollow center */
-    height: 200px; /* Adjust to create hollow center */
-    background-color: transparent; /* Background to create hollow effect */
-    border-radius: 50%;
-}
-.right-image {
-  position: absolute; /* Keeps the image in a fixed position */
-  right: 0px; /* Aligns the image to the left */
-  top: 110px; /* Aligns the image to the top */
-  height: 125px; /* Optional: Make the image as tall as the viewport */
-  width: 150px; /* Maintain the aspect ratio of the image */
-  background-color: rgb(87, 87, 153);
-  padding: 20px;
 }
 
-.right-image-second {
-  position: absolute; /* Keeps the image in a fixed position */
-  right: 0px; /* Aligns the image to the left */
-  top: 235px; /* Aligns the image to the top */
-  height: 100px; /* Optional: Make the image as tall as the viewport */
-  width: 150px; /* Maintain the aspect ratio of the image */
+/* styling for the an image on the website*/
+.right-image {
+  position: absolute; 
+  right: 0px; 
+  top: 110px; 
+  height: 125px; 
+  width: 150px; 
   background-color: rgb(87, 87, 153);
   padding: 20px;
 }
+/* styling for the an image on the website*/
+.right-image-second {
+  position: absolute; 
+  right: 0px; 
+  top: 235px; 
+  height: 100px; 
+  width: 150px; 
+  background-color: rgb(87, 87, 153);
+  padding: 20px;
+}
+/* styling for the an image on the website*/
 .right-image-last {
-  position: absolute; /* Keeps the image in a fixed position */
-  right: 0px; /* Aligns the image to the left */
-  top: 360px; /* Aligns the image to the top */
-  height: 100px; /* Optional: Make the image as tall as the viewport */
-  width: 150px; /* Maintain the aspect ratio of the image */
+  position: absolute; 
+  right: 0px; 
+  top: 360px; 
+  height: 100px; 
+  width: 150px; 
   background-color: rgb(87, 87, 153);
   padding: 20px;
 }
@@ -141,3 +137,29 @@
   top: 80%;
 }
 
+/*Creates the button for the user to click*/
+.myButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* styling for the an image on the website*/
+.graph-image{
+  position: absolute; 
+  right: 150px; 
+  top: 100px; 
+  height: 250px; 
+  width: 270px; 
+}
+/* styling for the an image on the website*/
+.piechart-image{
+  position: absolute; 
+  left: 150px; 
+  top: 100px; 
+  height: 400px; 
+  width: 400px; 
+}
