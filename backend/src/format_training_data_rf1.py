@@ -1,6 +1,8 @@
 import csv
 import pandas as pd
 from datetime import datetime, timedelta
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Global Variables
 input_schedule = '../data/Schedule.csv'
@@ -208,6 +210,23 @@ def create_new_training_dataset():
     format_schedule_data(input_schedule, output_schedule)
     df = pd.read_csv(output_schedule)
     df = calc_schedule_data(df)
+
+    # Select only numerical columns
+    numerical_df = df.select_dtypes(include=['float64', 'int64'])
+
+    # Calculate the correlation matrix
+    corr_matrix = numerical_df.corr()
+
+    # Set up the matplotlib figure
+    plt.figure(figsize=(10, 8))
+
+    # Create a heatmap with seaborn
+    sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt='.2f')
+
+    # Display the heatmap
+    plt.title("Feature Correlation Heatmap - RF1")
+    plt.savefig('../data/correlation_heatmap_rf1.png')
+
     save_df(df)
 
 def main():

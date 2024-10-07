@@ -186,7 +186,7 @@ def create_new_training_dataset(separate_home_away=True):
 
     # Display the heatmap
     plt.title("Feature Correlation Heatmap")
-    plt.savefig('correlation_heatmap.png')
+    plt.savefig('../data/correlation_heatmap.png')
     
     save_df(df)
 
