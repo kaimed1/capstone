@@ -66,13 +66,18 @@ def AddStatsToSchedule():
 
     schedule_df = schedule_df.merge(stats_df, left_on='Team', right_on='team_id', how='left')
 
-    schedule_df.drop(columns=['School', 'team_id'], inplace=True)
-
     schedule_df.dropna(subset=['Conference'], inplace=True)
+    
+    schedule_df.drop(columns=['School', 'team_id', 'Conference'], inplace=True) #Eventually add columns back in
+
 
     schedule_df['W'] = schedule_df['W'].astype('int')
 
     schedule_df['L'] = schedule_df['L'].astype('int')
+
+    schedule_df['AP Rank'] = pd.to_numeric(schedule_df['AP Rank'], errors='coerce')
+
+    schedule_df['AP Rank'] = schedule_df['AP Rank'].astype('Int64')
 
     schedule_df.to_csv('../data/Schedule_Stats.csv', index=True, index_label='game_id')
 
