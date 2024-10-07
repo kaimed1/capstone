@@ -1,6 +1,8 @@
 import csv
 import pandas as pd
 from datetime import datetime
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Global Variables
 input_schedule = '../data/Schedule.csv'
@@ -92,30 +94,6 @@ def remove_bye_weeks_and_extra_days(df):
     # Remove any rows with 'BYE' in the 'Location' column
     df = df[df['Location'] != 'BYE']
 
-    # Drop Day
-    df = df.drop('Day', axis=1)
-
-    return df
-
-# Add a column to track if the previous week was a bye week
-def calculate_bye_weeks(df):
-    print("Calculating bye weeks...")
-    df['PrevWeekBYE'] = 0  # Initialize the column with 0
-
-    for team, group in df.groupby('Team'):
-        prev_week_bye = 0  # Track if the previous week was a bye
-        prev_week = None
-
-        for week_start, week_data in group.groupby(pd.Grouper(key='Date', freq='W-SAT')):
-            if prev_week is not None:
-                if (prev_week['Location'] == 'BYE').all():
-                    prev_week_bye = 1
-                else:
-                    prev_week_bye = 0
-                # Update 'PrevWeekBYE' for the current week
-                df.loc[week_data.index, 'PrevWeekBYE'] = prev_week_bye
-            prev_week = week_data
-
     return df
 
 # Transform 'Location' to binary HomeTeamAdvantage
@@ -134,17 +112,21 @@ def calc_running_avg_score(df):
 
 # Calculate win rate for home and away games
 def calc_win_rate(df, separate_home_away=True):
+
+    # Convert 'Result' column to binary
+    df['Result'] = df['Result'].apply(lambda x: 1 if x == 'W' else 0)
+    
     print("Calculating win rates...")
     if separate_home_away:
         # Calculate win rate for home and away games
-        df['Home_Win_Rate'] = df[df['HomeTeamAdvantage'] == 1].groupby('Team')['Result'].transform(lambda x: x.eq('W').cumsum() / x.expanding().count())
-        df['Away_Win_Rate'] = df[df['HomeTeamAdvantage'] == 0].groupby('Team')['Result'].transform(lambda x: x.eq('W').cumsum() / x.expanding().count())
+        df['Home_Win_Rate'] = df[df['HomeTeamAdvantage'] == 1].groupby('Team')['Result'].transform(lambda x: x.eq(1).cumsum() / x.expanding().count())
+        df['Away_Win_Rate'] = df[df['HomeTeamAdvantage'] == 0].groupby('Team')['Result'].transform(lambda x: x.eq(1).cumsum() / x.expanding().count())
         # Fill NaN values forward and backward
         df['Home_Win_Rate'] = df.groupby('Team')['Home_Win_Rate'].ffill().bfill()
         df['Away_Win_Rate'] = df.groupby('Team')['Away_Win_Rate'].ffill().bfill()
     else:
         # Calculate a single win rate
-        df['Win_Rate'] = df.groupby('Team')['Result'].transform(lambda x: x.eq('W').cumsum() / x.expanding().count())
+        df['Win_Rate'] = df.groupby('Team')['Result'].transform(lambda x: x.eq(1).cumsum() / x.expanding().count())
         # Fill NaN values
         df['Win_Rate'] = df.groupby('Team')['Win_Rate'].ffill().bfill()
 
@@ -166,7 +148,7 @@ def save_df(df):
 def calc_schedule_data(df, separate_home_away=True):
     df = format_dataframe(df)
     df = remove_bye_weeks_and_extra_days(df)  # Remove bye weeks and extra days
-    df = calculate_bye_weeks(df)  # Add the 'PrevWeekBYE' column
+
     df = format_location(df)
     df = calc_running_avg_score(df)
     df = calc_win_loss(df)
@@ -189,6 +171,22 @@ def create_new_training_dataset(separate_home_away=True):
 
     # Drop the temporary GamePair column if you don't need it
     df = df.drop(columns=['GamePair'])
+
+    # Select only numerical columns
+    numerical_df = df.select_dtypes(include=['float64', 'int64'])
+
+    # Calculate the correlation matrix
+    corr_matrix = numerical_df.corr()
+
+    # Set up the matplotlib figure
+    plt.figure(figsize=(10, 8))
+
+    # Create a heatmap with seaborn
+    sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt='.2f')
+
+    # Display the heatmap
+    plt.title("Feature Correlation Heatmap")
+    plt.savefig('correlation_heatmap.png')
     
     save_df(df)
 

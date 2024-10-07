@@ -74,7 +74,7 @@ def find_best_parameters():
 
 def train_save_model():
     global attribute_columns, rf_params
-    data, encoders = load_and_prepare_data("../data/Training_Schedule.csv")
+    data, encoders = load_and_prepare_data("../data/Training_Schedule_RF1.csv")
     # Split data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(data[attribute_columns], data['Result_encoded'], test_size=0.3, random_state=42, stratify=data['Result_encoded'])
 
