@@ -75,9 +75,7 @@ def AddStatsToSchedule():
 
     schedule_df['L'] = schedule_df['L'].astype('int')
 
-    schedule_df['AP Rank'] = pd.to_numeric(schedule_df['AP Rank'], errors='coerce')
-
-    schedule_df['AP Rank'] = schedule_df['AP Rank'].astype('Int64')
+    schedule_df['AP Rank'] = schedule_df['AP Rank'].fillna('-1').astype('int')
 
     schedule_df.to_csv('../data/Schedule_Stats.csv', index=True, index_label='game_id')
 
