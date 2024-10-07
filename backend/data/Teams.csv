@@ -64,7 +64,7 @@ team_id,Team,School,Conference
 63,Florida International Panthers,Florida International,Conference USA
 64,Florida State Seminoles,Florida State,Atlantic Coast Conference
 65,Fordham Rams,Fordham,Patriot League
-66,Fresno State Bulldogs,Fresno,Mountain West Conference
+66,Fresno State Bulldogs,Fresno State,Mountain West Conference
 67,Furman Paladins,Furman,Southern Conference
 68,Gardner Webb Runnin' Bulldogs,Gardner Webb,Big South-OVC
 69,Georgetown Hoyas,Georgetown,Patriot League
@@ -75,7 +75,7 @@ team_id,Team,School,Conference
 74,Grambling Tigers,Grambling,Southwestern Athletic Conference
 75,Hampton Pirates,Hampton,Colonial Athletic Association
 76,Harvard Crimson,Harvard,Ivy League
-77,Hawai'i Rainbow Warriors,Hawai'i,Mountain West Conference
+77,Hawai'i Rainbow Warriors,Hawaii,Mountain West Conference
 78,Holy Cross Crusaders,Holy Cross,Patriot League
 79,Houston Christian Huskies,Houston Chrisian,Southland Conference
 80,Houston Cougars,Houston,Big 12 Conference
@@ -117,10 +117,10 @@ team_id,Team,School,Conference
 116,Mercer Bears,Mercer,Southern Conference
 117,Merrimack Warriors,Merrimack,Northeast Conference
 118,Miami (OH) RedHawks,Miami (OH),Mid-American Conference
-119,Miami Hurricanes,Miami,Atlantic Coast Conference
+119,Miami Hurricanes,Miami (FL),Atlantic Coast Conference
 120,Michigan State Spartans,Michigan State,Big Ten Conference
 121,Michigan Wolverines,Michigan,Big Ten Conference
-122,Middle Tennessee Blue Raiders,Middle Tennessee,Conference USA
+122,Middle Tennessee Blue Raiders,Middle Tennessee State,Conference USA
 123,Minnesota Golden Gophers,Minnesota,Big Ten Conference
 124,Mississippi State Bulldogs,Mississippi State,Southeastern Conference
 125,Mississippi Valley State Delta Devils,Mississippi Valley State,Southwestern Athletic Conference
@@ -144,7 +144,7 @@ team_id,Team,School,Conference
 143,North Alabama Lions,North Alabama,United Athletic Conference
 144,North Carolina A&T Aggies,North Carolina A&T,Colonial Athletic Association
 145,North Carolina Central Eagles,North Carolina Central,Mid-Eastern Athletic Conference
-146,North Carolina Tar Heels,North Caronlina,Atlantic Coast Conference
+146,North Carolina Tar Heels,North Carolina,Atlantic Coast Conference
 147,North Dakota Fighting Hawks,North Dakota,Missouri Valley Football Conference
 148,North Dakota State Bison,North Dakota State,Missouri Valley Football Conference
 149,North Texas Mean Green,North Texas,American Athletic Conference
@@ -175,7 +175,7 @@ team_id,Team,School,Conference
 174,Rice Owls,Rice,American Athletic Conference
 175,Richmond Spiders,Richmond,Colonial Athletic Association
 176,Robert Morris Colonials,Rober Morris,Big South-OVC
-177,Rutgers Scarlet Knights,Rutgers Scarlet,Big Ten Conference
+177,Rutgers Scarlet Knights,Rutgers,Big Ten Conference
 178,SE Louisiana Lions,SE Louisiana,Southland Conference
 179,SMU Mustangs,SMU,American Athletic Conference
 180,Sacramento State Hornets,Sacremento State,Big Sky Conference
@@ -259,3 +259,4 @@ team_id,Team,School,Conference
 258,Wyoming Cowboys,Wyoming,Mountain West Conference
 259,Yale Bulldogs,Yale,Ivy League
 260,Youngstown State Penguins,Youngstown,Missouri Valley Football Conference
+261,Army Black Knights,Army,American Athletic Conference
