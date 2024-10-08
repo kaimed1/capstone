@@ -13,11 +13,11 @@ import React, {useState} from 'react';
 
 function App() {
 
-  const [inputValue, setInputValue]= useState('');
-
-  //When user changes input it will put new value into inputValue
-  const handleInputCharge = (e) => {setInputValue(e.target.value)};
-
+  const [homeTeam, setHomeTeam]= useState('');
+  const [awayTeam, setAwayTeam] = useState('');
+  
+  const handleInputChargeHome = (e) => {setInputValue(e.target.value.replace(/ /g, '_'))};
+  const handleInputChargeAway = (e) => {setInputValue(e.target.value,replace(/ /g, '_'))};
   //Outputs the the user the terminal output
   const [terminalOutput, setTerminalOutput] = useState("Fetching terminal output...");
 
@@ -27,12 +27,11 @@ function App() {
   //This is the function that fetches the terminal output from the server with the 
   //get request to the API,
   const fetchTerminalOutput = async () => {
-
     setIsFetching(true);
 
     //Waits fo the response of the server with the winning team
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/data/');
+      const response = await fetch('http://127.0.0.1:8000/api/random?home=${homeTeam}&away=${awayTeam}');
       const data = await response.json();
       setTerminalOutput(data.output);
     } catch (error) {
@@ -79,8 +78,8 @@ function App() {
       <img src = {pie} alt = "pie" class = "piechart-image"></img>
 
       //Input boxes for teams
-      <input type = "text" id ="textbox" class = 'textbox' value = {inputValue} onChange = {handleInputCharge} placeholder = "Home Team"/>
-      <input type = "text" id ="textbox" class = 'second-textbox' value = {inputValue} onChange = {handleInputCharge} placeholder = "Away Team"/>
+      <input type = "text" id ="textbox" class = 'textbox' value = {homeTeam} onChange = {handleInputChargeHome} placeholder= "Home Team"/>
+      <input type = "text" id ="textbox" class = 'second-textbox' value = {awayTeam} onChange = {handleInputChargeAway} placeholder = "Away Team"/>
 
       </header>
     </div>
