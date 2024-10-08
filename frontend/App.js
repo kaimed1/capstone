@@ -33,8 +33,11 @@ function App() {
     //Waits fo the response of the server with the winning team
     try {
       const response = await fetch('http://127.0.0.1:8000/api/random?home=${homeTeam}&away=${awayTeam}');
+      
       const data = await response.json();
-      setTerminalOutput(data.output);
+
+      setTerminalOutput('Winner: ${data.winner_name}');
+      
     } catch (error) {
       setTerminalOutput("Error fetching terminal output.");
     }
