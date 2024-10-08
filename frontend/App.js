@@ -12,12 +12,13 @@ import './App.css';
 import React, {useState} from 'react';
 
 function App() {
-
+  //Creates the input places for the user
   const [homeTeam, setHomeTeam]= useState('');
   const [awayTeam, setAwayTeam] = useState('');
-  
-  const handleInputChargeHome = (e) => {setInputValue(e.target.value.replace(/ /g, '_'))};
-  const handleInputChargeAway = (e) => {setInputValue(e.target.value,replace(/ /g, '_'))};
+
+  //handles input from user in each box
+  const handleInputChargeHome = (e) => {setHomeTeam(e.target.value.replace(/ /g, '_'))};
+  const handleInputChargeAway = (e) => {setAwayTeam(e.target.value.replace(/ /g, '_'))};
   //Outputs the the user the terminal output
   const [terminalOutput, setTerminalOutput] = useState("Fetching terminal output...");
 
@@ -77,7 +78,7 @@ function App() {
       <img src = {graph} alt = "graph" class = "graph-image"></img>
       <img src = {pie} alt = "pie" class = "piechart-image"></img>
 
-      //Input boxes for teams
+      
       <input type = "text" id ="textbox" class = 'textbox' value = {homeTeam} onChange = {handleInputChargeHome} placeholder= "Home Team"/>
       <input type = "text" id ="textbox" class = 'second-textbox' value = {awayTeam} onChange = {handleInputChargeAway} placeholder = "Away Team"/>
 
