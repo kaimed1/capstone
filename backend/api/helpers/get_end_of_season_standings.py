@@ -1,7 +1,7 @@
 import pandas as pd
 
 def get_end_of_season_standings():
-    df = pd.read_csv('./backend/data/Training_Schedule.csv')
+    df = pd.read_csv('./backend/data/Training_Schedule_RF1.csv')
 
     standings_df = {}
 
