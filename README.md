@@ -1,6 +1,6 @@
-# capstone- D1 Football Predictor
+# Capstone- D1 Football Predictor
 
-## Running Aplication
+## Running Application
 
 ### 1. Make sure that JavaScript is installed, if not install here: https://nodejs.org/en
 ### 2. Download the frontend folder from this github repository
