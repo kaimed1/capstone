@@ -14,11 +14,12 @@ le_opponent = encoders['Opponent']
 le_location = encoders['Location']
 le_result = encoders['Result']
 
-# Step 4: Encode categorical variables
+# Encode categorical variables
 df['Team_encoded'] = le_team.transform(df['Team'])
 df['Opponent_encoded'] = le_opponent.transform(df['Opponent'])
 df['Location_encoded'] = le_location.transform(df['Location'])
 
+# Define the features that will be used to make the predictions
 features = ['Team_encoded', 
                     'Location_encoded', 
                     'Opponent_encoded', 
@@ -31,11 +32,8 @@ features = ['Team_encoded',
                     'Opponent_Wins', 
                     'Opponent_Losses']
 
+# Make the prediction using the df and defined features
 predictions = model.predict(df[features])
 
-# Get each prediction and decode it being sure to take into account that is a multi-target model
-
-
-# Print the predictions
-
+# Print the prediction
 print(predictions)
