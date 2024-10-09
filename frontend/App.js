@@ -36,8 +36,8 @@ function App() {
       
       const data = await response.json();
 
-      setTerminalOutput('Winner: ${data.winner_name}');
-      
+      setTerminalOutput(`Winner: ${data.winner_name}`);
+
     } catch (error) {
       setTerminalOutput("Error fetching terminal output.");
     }
