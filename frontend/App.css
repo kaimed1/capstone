@@ -1,0 +1,165 @@
+/* Aligns all text to the center*/
+.App {
+  text-align: center;
+}
+
+/* Creates Background */
+.multicolor-background {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  
+  /* Linear Gradient for multicolor background */
+  background: linear-gradient(
+    180deg,         /* Gradient direction */
+    rgb(95, 101, 163),
+    rgb(50, 53, 85),
+    rgb(39, 41, 61)
+  );
+}
+
+/* Creates head banner */
+.header-text {
+  background-color: rgb(3, 3, 35); 
+  color: white; 
+  font-size: 40px; 
+  text-align: center; 
+  padding: 10px; 
+  font-weight: bold; 
+  position: absolute; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  width: 100%;
+  text-shadow: 
+    2px 2px 0px #000000, 
+    4px 4px 0px #888888, 
+    6px 6px 0px #444444; 
+}
+
+/* styling for an image on the website*/
+.left-image {
+  position: absolute; /* Keeps the image in a fixed position */
+  left: 0px; 
+  top: 110px; 
+  height: 100px;
+  width: 150px; 
+  background-color: rgb(130, 39, 39);
+  padding: 20px;
+}
+
+/* styling for the an image on the website*/
+.left-image-second {
+  position: absolute; 
+  left: 0px; 
+  top: 235px; 
+  height: 100px; 
+  width: 150px; 
+  background-color:  rgb(130, 39, 39);
+  padding: 20px;
+}
+
+/* styling for the left image on the website*/
+.left-image-last {
+  position: absolute; 
+  left: 0px; 
+  top: 360px; 
+  height: 100px; 
+  width: 150px; 
+  background-color:  rgb(130, 39, 39);
+  padding: 20px;
+}
+
+/* styling for the an image on the website*/
+.center-image{
+    position: absolute; 
+    left: 40%; 
+    top: 36%; 
+    height: 200px; 
+    width: 250px; 
+    rotate: 90deg;
+  }
+
+  /* Creates circle around football in center*/
+  .hollow-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Makes it a circle */
+    background: linear-gradient(90deg, rgb(130, 39, 39)50%, rgb(87, 87, 153) 50%); /* Red to blue gradient */
+    position: absolute;
+}
+
+/* styling for the an image on the website*/
+.right-image {
+  position: absolute; 
+  right: 0px; 
+  top: 110px; 
+  height: 125px; 
+  width: 150px; 
+  background-color: rgb(87, 87, 153);
+  padding: 20px;
+}
+/* styling for the an image on the website*/
+.right-image-second {
+  position: absolute; 
+  right: 0px; 
+  top: 235px; 
+  height: 100px; 
+  width: 150px; 
+  background-color: rgb(87, 87, 153);
+  padding: 20px;
+}
+/* styling for the an image on the website*/
+.right-image-last {
+  position: absolute; 
+  right: 0px; 
+  top: 360px; 
+  height: 100px; 
+  width: 150px; 
+  background-color: rgb(87, 87, 153);
+  padding: 20px;
+}
+/* Position textbox */
+.textbox{
+  position: absolute;
+  left:25%;
+  top: 80%;
+}
+
+/* Position textbox */
+.second-textbox{
+  position: absolute;
+  right: 25%;
+  top: 80%;
+}
+
+/*Creates the button for the user to click*/
+.myButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* styling for the an image on the website*/
+.graph-image{
+  position: absolute; 
+  right: 150px; 
+  top: 100px; 
+  height: 250px; 
+  width: 270px; 
+}
+/* styling for the an image on the website*/
+.piechart-image{
+  position: absolute; 
+  left: 150px; 
+  top: 100px; 
+  height: 400px; 
+  width: 400px; 
+}
