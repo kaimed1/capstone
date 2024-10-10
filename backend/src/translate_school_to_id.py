@@ -21,6 +21,8 @@ stat_order = [
     'Def_Total',
 ]
 
+
+# Combines Teams.csv with 2023FBSAdvanced.csv for only teams included in 2023FBSAdvanced.csv
 def ChangeStatsFile():
     stats_df = pd.read_csv('../data/2023FBSAdvanced.csv')
 
@@ -28,12 +30,12 @@ def ChangeStatsFile():
 
     merged_df = pd.merge(stats_df, teams_df[['Conference', 'team_id', 'School']], left_on='School', right_on='School', how='left')
 
-    merged_df['AP Rank'] = merged_df['AP Rank'].astype('int')
-
     merged_df = merged_df[stat_order]
 
     merged_df.to_csv('../data/Combined_2023_Team_Stats.csv', index=False)
 
+
+# Translates team names in Schedule.csv into their team_id from Teams.csv
 def ChangeScheduleFile():
     schedule_df = pd.read_csv('../data/Training_Schedule.csv')
 
@@ -57,6 +59,8 @@ def ChangeScheduleFile():
 
     schedule_df.to_csv('../data/ID_Schedule.csv', index=False)
 
+
+# Adds advanced stats from Combined_2023_Team_Stats.csv with Schedule.csv and filters out any matching including FCS teams
 def AddStatsToSchedule():
     schedule_df = pd.read_csv('../data/ID_Schedule.csv')
 
@@ -66,10 +70,17 @@ def AddStatsToSchedule():
 
     schedule_df = schedule_df.merge(stats_df, left_on='Team', right_on='team_id', how='left')
 
+    fcs_teams = schedule_df[schedule_df['Conference'].isna()]['Team'].unique()
+
+    schedule_df = schedule_df[~schedule_df['Opponent'].isin(fcs_teams)]
+
     schedule_df.dropna(subset=['Conference'], inplace=True)
-    
+
     schedule_df.drop(columns=['School', 'team_id', 'Conference'], inplace=True) #Eventually add columns back in
 
+    pd.set_option('future.no_silent_downcasting', True)
+
+    schedule_df['Result'] = schedule_df['Result'].replace({'W': 1, 'L': 0})
 
     schedule_df['W'] = schedule_df['W'].astype('int')
 
@@ -78,5 +89,6 @@ def AddStatsToSchedule():
     schedule_df['AP Rank'] = schedule_df['AP Rank'].fillna('-1').astype('int')
 
     schedule_df.to_csv('../data/Schedule_Stats.csv', index=True, index_label='game_id')
+
 
 AddStatsToSchedule()
