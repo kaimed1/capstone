@@ -32,8 +32,7 @@ def ChangeStatsFile():
 
     merged_df = merged_df[stat_order]
 
-    merged_df.to_csv('../data/Combined_2023_Team_Stats.csv', index=False)
-
+    return merged_df
 
 # Translates team names in Schedule.csv into their team_id from Teams.csv
 def ChangeScheduleFile():
@@ -57,15 +56,10 @@ def ChangeScheduleFile():
 
     schedule_df.drop(schedule_df[schedule_df['Opponent'] == -1].index, inplace=True)
 
-    schedule_df.to_csv('../data/ID_Schedule.csv', index=False)
-
+    return schedule_df
 
 # Adds advanced stats from Combined_2023_Team_Stats.csv with Schedule.csv and filters out any matching including FCS teams
-def AddStatsToSchedule():
-    schedule_df = pd.read_csv('../data/ID_Schedule.csv')
-
-    stats_df = pd.read_csv('../data/Combined_2023_Team_Stats.csv')
-
+def AddStatsToSchedule(stats_df, schedule_df):
     stats_df.drop(columns=['Rk'], inplace=True)
 
     schedule_df = schedule_df.merge(stats_df, left_on='Team', right_on='team_id', how='left')
@@ -91,4 +85,7 @@ def AddStatsToSchedule():
     schedule_df.to_csv('../data/Schedule_Stats.csv', index=True, index_label='game_id')
 
 
-AddStatsToSchedule()
+stats_df = ChangeStatsFile()
+schedule_df = ChangeScheduleFile()
+
+AddStatsToSchedule(stats_df, schedule_df)
