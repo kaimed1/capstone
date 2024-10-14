@@ -27,6 +27,7 @@ def random_forest_prediction(home_team_standing, away_team_standing):
     new_game["Opponent_Home_Win_Rate"] = away_team_standing["Home_Win_Rate"]
     new_game["Opponent_Away_Win_Rate"] = away_team_standing["Away_Win_Rate"]
 
+    # Load from encoders
     le_team = encoders['Team']
     le_opponent = encoders['Opponent']
     le_location = encoders['Location']
@@ -35,14 +36,18 @@ def random_forest_prediction(home_team_standing, away_team_standing):
     new_game['Opponent_encoded'] = le_opponent.transform([new_game['Opponent']])[0]
     new_game['Location_encoded'] = le_location.transform([new_game['Location']])[0]
 
+    # Features to use in prediction
     features = ['Team_encoded', 'Location_encoded', 'Opponent_encoded', 'PrevWeekBYE', 'Wins', 'Losses',
             'RunningAvgScore', 'Home_Win_Rate', 'Away_Win_Rate', 'Opponent_Wins', 'Opponent_Losses']
-        
+
+    # Create a pandas dataframe for the game
     new_game_df = pd.DataFrame([new_game], columns=features)
-        
+ 
+    # Make prediction
     predictions = model.predict(new_game_df)
 
     winner_name = new_game["Team"] if predictions[0] == 1 else new_game["Opponent"]
     loser_name = new_game["Opponent"] if predictions[0] == 1 else new_game["Team"]
 
+    # Return winner and loser (-1 scores because we aren't predicting those yet)
     return (winner_name, loser_name, -1, -1)

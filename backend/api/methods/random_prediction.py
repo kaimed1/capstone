@@ -18,4 +18,5 @@ def random_prediction(home_team: str, away_team: str):
     winner_score = round(r * 50)
     loser_score = round(r * 20)
 
+    # Return winner, loser, and fake scores
     return (winner_name, loser_name, winner_score, loser_score)
