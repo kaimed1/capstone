@@ -18,6 +18,7 @@ def random_prediction(request):
     # Get away team param
     away_team = request.GET.get("away")
 
+    # Make random prediction
     winner_name, loser_name, winner_score, loser_score = random_prediction_method(home_team, away_team)
 
     res = {
@@ -40,6 +41,7 @@ def random_forest_prediction(request):
     home_team_standing = ""
     away_team_standing = ""
 
+    # Make sure team names are valid
     try:
         home_team_standing = end_of_season_standings[home_team]
         away_team_standing = end_of_season_standings[away_team]
@@ -49,6 +51,8 @@ def random_forest_prediction(request):
         })
     
     try:
+
+        # Make prediction using RF1 model
         winner_name, loser_name, winner_score, loser_score = random_forest_prediction_method(home_team_standing, away_team_standing)
 
         res = {

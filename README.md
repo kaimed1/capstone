@@ -1,12 +1,46 @@
-# Capstone- D1 Football Predictor
+# Capstone - D1 Football Predictor
 
-## Running Application
+The D1 Football Predictor is used for making predictions between division 1 college football teams using 2023 data (and eventually live data). This project consists of a React client application and Django (Python) server. 
+
+## Running the React Frontend
 
 ### 1. Make sure that JavaScript is installed, if not install here: https://nodejs.org/en
 ### 2. Download the frontend folder from this github repository
 ### 3. Navigate to the folder where app.js is located through the administrator version of command line
 ### 4. Run "npm install" to install all neccessary dependencies 
 ### 5. Lastly, type "npm start" in the command line and the application should open up a browser automatically at "http://localhost:3000/"
+
+## Running the Django API
+
+The Django API is used to generate predictions for college football games using different prediction methods. The React frontend will call this API to generate and display predictions.
+
+### Install requirements
+
+```
+pip install pandas django joblib scikit-learn
+```
+
+### Format training data (for first random forest model)
+```
+python backend/src/format_training_data_rf1.py
+```
+
+### Generate models (only random forest right now)
+```
+python backend/src/random_forest_1.py
+```
+
+### Run server
+```
+python backend/manage.py runserver
+```
+
+### Example
+
+Making an http request to the following URL would make a random prediction for a Texas @ Oklahoma game.
+
+http://localhost:8000/api/random?home=Oklahoma_Sooners&away=Texas_Longhorns
+
 
 ## Predicting a Game with Baseline Random Forest Model
 An example of this can be seen in 'prediction_example_rf1.py', but the general steps are outlined below:
