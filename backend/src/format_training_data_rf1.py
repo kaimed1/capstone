@@ -1,12 +1,8 @@
 import csv
 import pandas as pd
-<<<<<<< HEAD:backend/src/format_training_data.py
-from datetime import datetime
-=======
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 import seaborn as sns
->>>>>>> origin/main:backend/src/format_training_data_rf1.py
 
 # Global Variables
 input_schedule = '../data/Schedule.csv'
@@ -79,10 +75,6 @@ def format_dataframe(df):
 
     return df
 
-<<<<<<< HEAD:backend/src/format_training_data.py
-# Remove bye weeks and non-game days (like extra days during the week)
-def remove_bye_weeks_and_extra_days(df):
-=======
 # Change 'location' to 'Home' or 'Away'
 def format_location(df):
     """
@@ -161,7 +153,6 @@ def calculate_bye_weeks(df):
     Parameters:
     df (DataFrame): The DataFrame containing the schedule data
     """
->>>>>>> origin/main:backend/src/format_training_data_rf1.py
     print("Calculating bye weeks...")
     # Initialize 'PrevWeekBYE' column with False
     df['PrevWeekBYE'] = 0
@@ -198,12 +189,6 @@ def calculate_bye_weeks(df):
 
     return df
 
-<<<<<<< HEAD:backend/src/format_training_data.py
-# Add a column to track if the previous week was a bye week
-def calculate_bye_weeks(df):
-    print("Calculating bye weeks...")
-    df['PrevWeekBYE'] = 0  # Initialize the column with 0
-=======
 # Calculate and merge opponent stats
 def calc_opponent_stats(df):
     """
@@ -223,7 +208,6 @@ def calc_opponent_stats(df):
         'Home_Win_Rate': 'Opponent_Home_Win_Rate',
         'Away_Win_Rate': 'Opponent_Away_Win_Rate',
     })
->>>>>>> origin/main:backend/src/format_training_data_rf1.py
 
     for team, group in df.groupby('Team'):
         prev_week_bye = 0  # Track if the previous week was a bye
@@ -282,13 +266,6 @@ def calc_win_loss(df):
 
 # Save df to a csv
 def save_df(df):
-<<<<<<< HEAD:backend/src/format_training_data.py
-    print("Saving transformed data to " + output_schedule)
-    df.to_csv(output_schedule, index=False)
-
-# Main function to process the schedule data
-def calc_schedule_data(df, separate_home_away=True):
-=======
     """
     This function saves the DataFrame to a CSV file.
 
@@ -306,7 +283,6 @@ def calc_schedule_data(df):
     This function calls the functions to calculate the new features for the schedule data. It is IMPORTANT that these functions
     are called in this order to ensure data is calculated correctly.
     """
->>>>>>> origin/main:backend/src/format_training_data_rf1.py
     df = format_dataframe(df)
     df = remove_bye_weeks_and_extra_days(df)  # Remove bye weeks and extra days
     df = calculate_bye_weeks(df)  # Add the 'PrevWeekBYE' column
@@ -316,25 +292,6 @@ def calc_schedule_data(df):
     df = calc_win_rate(df, separate_home_away=separate_home_away)
     return df
 
-<<<<<<< HEAD:backend/src/format_training_data.py
-def create_new_training_dataset(separate_home_away=True):
-    format_schedule_data(input_schedule, output_schedule)
-    df = pd.read_csv(output_schedule)
-    df = calc_schedule_data(df, separate_home_away=separate_home_away)
-
-    # Reorder columns
-    df= df[[ 'Date', 'Team', 'Opponent', 'Result', 'Score', 'Opponent Score', 'HomeTeamAdvantage', 'PrevWeekBYE', 'RunningAvgScore', 'Wins', 'Losses', 'Home_Win_Rate', 'Away_Win_Rate']]
-    
-    # Create a new column to consistently order team and opponent names
-    df['GamePair'] = df.apply(lambda x: '_'.join(sorted([x['Team'], x['Opponent']])), axis=1)
-
-    # Sort by Date and GamePair
-    df = df.sort_values(by=['Date', 'GamePair'])
-
-    # Drop the temporary GamePair column if you don't need it
-    df = df.drop(columns=['GamePair'])
-    
-=======
 def create_new_training_dataset():
     """ 
     This function creates a new training dataset for the Random Forest model by reading the schedule data, formatting it and
@@ -361,7 +318,6 @@ def create_new_training_dataset():
     plt.title("Feature Correlation Heatmap - RF1")
     plt.savefig('../data/correlation_heatmap_rf1.png')
 
->>>>>>> origin/main:backend/src/format_training_data_rf1.py
     save_df(df)
 
 def main():
@@ -369,8 +325,4 @@ def main():
     create_new_training_dataset(separate_home_away=True)
 
 if __name__ == "__main__":
-<<<<<<< HEAD:backend/src/format_training_data.py
     main()
-=======
-    main()
->>>>>>> origin/main:backend/src/format_training_data_rf1.py
