@@ -1,0 +1,261 @@
+team_id,Team,School,Conference
+1,Abilene Christian Wildcats,Abilene,United Athletic Conference
+2,Air Force Falcons,Air Force,Mountain West Conference
+3,Akron Zips,Akron,Mid-American Conference
+4,Alabama A&M Bulldogs,Alabama A&M,Southwestern Athletic Conference
+5,Alabama Crimson Tide,Alabama,Southeastern Conference
+6,Alabama State Hornets,Alabama State,Southwestern Athletic Conference
+7,Alcorn State Braves,Alcorn State,Southwestern Athletic Conference
+8,Appalachian State Mountaineers,Appalachian State,Sun Belt Conference
+9,Arizona State Sun Devils,Arizona State,Pacific 12 Conference
+10,Arizona Wildcats,Arizona,Pacific 12 Conference
+11,Arkansas Razorbacks,Arkansas,Southeastern Conference
+12,Arkansas State Red Wolves,Arkansas State,Sun Belt Conference
+13,Arkansas-Pine Bluff Golden Lions,Arkansas-Pine Bluff,Southwestern Athletic Conference
+14,Auburn Tigers,Auburn,Southeastern Conference
+15,Austin Peay Governors,Austin Peay,United Athletic Conference
+16,BYU Cougars,BYU,Big 12 Conference
+17,Ball State Cardinals,Ball State,Mid-American Conference
+18,Baylor Bears,Baylor,Big 12 Conference
+19,Bethune-Cookman Wildcats,Bethune-Cookman,Southwestern Athletic Conference
+20,Boise State Broncos,Boise State,Mountain West Conference
+21,Boston College Eagles,Boston College,Atlantic Coast Conference
+22,Bowling Green Falcons,Bowling Green,Mid-American Conference
+23,Brown Bears,Brown,Ivy League
+24,Bryant Bulldogs,Bryant,Big South-OVC
+25,Bucknell Bison,Bucknell,Patriot League
+26,Buffalo Bulls,Buffalo,Mid-American Conference
+27,Butler Bulldogs,Butler,Pioneer Football League
+28,Cal Poly Mustangs,Cal Poly,Big Sky Conference
+29,California Golden Bears,California,Pacific 12 Conference
+30,Campbell Fighting Camels,Campbell,Colonial Athletic Association
+31,Central Arkansas Bears,Central Arkansas,United Athletic Conference
+32,Central Connecticut Blue Devils,Central Connecticut,Northeast Conference
+33,Central Michigan Chippewas,Central Michigan,Mid-American Conference
+34,Charleston Southern Buccaneers,Charleston Southern,Big South-OVC
+35,Charlotte 49ers,Charlotte,American Athletic Conference
+36,Chattanooga Mocs,Chattanooga,Southern Conference
+37,Cincinnati Bearcats,Cincinnati,Big 12 Conference
+38,Clemson Tigers,Clemson,Atlantic Coast Conference
+39,Coastal Carolina Chanticleers,Coastal Carolina,Sun Belt Conference
+40,Colgate Raiders,Colgate,Patriot League
+41,Colorado Buffaloes,Colorado,Pacific 12 Conference
+42,Colorado State Rams,Colorado State,Mountain West Conference
+43,Columbia Lions,Columbia,Ivy League
+44,Cornell Big Red,Cornell,Ivy League
+45,Dartmouth Big Green,Dartmouth,Ivy League
+46,Davidson Wildcats,Davidson,Pioneer Football League
+47,Dayton Flyers,Dayton,Pioneer Football League
+48,Delaware Fightin' Blue Hens,Delaware,Colonial Athletic Association
+49,Delaware State Hornets,Deleware State,Mid-Eastern Athletic Conference
+50,Drake Bulldogs,Drake,Pioneer Football League
+51,Duke Blue Devils,Duke,Atlantic Coast Conference
+52,Duquesne Dukes,Duquesne,Northeast Conference
+53,East Carolina Pirates,East Carolina,American Athletic Conference
+54,East Tennessee State Buccaneers,East Tennessee State,Southern Conference
+55,Eastern Illinois Panthers,Eastern Illinois,Big South-OVC
+56,Eastern Kentucky Colonels,Eastern Kentucky,United Athletic Conference
+57,Eastern Michigan Eagles,Eastern Michigan,Mid-American Conference
+58,Eastern Washington Eagles,Eastern Washington,Big Sky Conference
+59,Elon Phoenix,Elon,Colonial Athletic Association
+60,Florida A&M Rattlers,Florida A&M,Southwestern Athletic Conference
+61,Florida Atlantic Owls,Florida Atlantic,American Athletic Conference
+62,Florida Gators,Florida,Southeastern Conference
+63,Florida International Panthers,Florida International,Conference USA
+64,Florida State Seminoles,Florida State,Atlantic Coast Conference
+65,Fordham Rams,Fordham,Patriot League
+66,Fresno State Bulldogs,Fresno State,Mountain West Conference
+67,Furman Paladins,Furman,Southern Conference
+68,Gardner Webb Runnin' Bulldogs,Gardner Webb,Big South-OVC
+69,Georgetown Hoyas,Georgetown,Patriot League
+70,Georgia Bulldogs,Georgia,Southeastern Conference
+71,Georgia Southern Eagles,Georgia Southern,Sun Belt Conference
+72,Georgia State Panthers,Georgia State,Sun Belt Conference
+73,Georgia Tech Yellow Jackets,Georgia Tech,Atlantic Coast Conference
+74,Grambling Tigers,Grambling,Southwestern Athletic Conference
+75,Hampton Pirates,Hampton,Colonial Athletic Association
+76,Harvard Crimson,Harvard,Ivy League
+77,Hawai'i Rainbow Warriors,Hawaii,Mountain West Conference
+78,Holy Cross Crusaders,Holy Cross,Patriot League
+79,Houston Christian Huskies,Houston Chrisian,Southland Conference
+80,Houston Cougars,Houston,Big 12 Conference
+81,Howard Bison,Howard,Mid-Eastern Athletic Conference
+82,Idaho State Bengals,Idaho State,Big Sky Conference
+83,Idaho Vandals,Idaho,Big Sky Conference
+84,Illinois Fighting Illini,Illinois,Big Ten Conference
+85,Illinois State Redbirds,Illinoi State,Missouri Valley Football Conference
+86,Incarnate Word Cardinals,Incarnate Word,Southland Conference
+87,Indiana Hoosiers,Indiana,Big Ten Conference
+88,Indiana State Sycamores,Indiana State,Missouri Valley Football Conference
+89,Iowa Hawkeyes,Iowa,Big Ten Conference
+90,Iowa State Cyclones,Iowa State,Big 12 Conference
+91,Jackson State Tigers,Jackson  State,Southwestern Athletic Conference
+92,Jacksonville State Gamecocks,Jacksonville State,Conference USA
+93,James Madison Dukes,James Madison,Sun Belt Conference
+94,Kansas Jayhawks,Kansas,Big 12 Conference
+95,Kansas State Wildcats,Kansas State,Big 12 Conference
+96,Kennesaw State Owls,Kennesaw State,Independent
+97,Kent State Golden Flashes,Kent State,Mid-American Conference
+98,Kentucky Wildcats,Kentucky,Southeastern Conference
+99,LSU Tigers,LSU,Southeastern Conference
+100,Lafayette Leopards,Lafayette,Patriot League
+101,Lamar Cardinals,Lamar,Southland Conference
+102,Lehigh Mountain Hawks,Lehigh,Patriot League
+103,Liberty Flames,Liberty,Conference USA
+104,Lindenwood Lions,Lindenwood,Big South-OVC
+105,Long Island University Sharks,Long Island University,Northeast Conference
+106,Louisiana Ragin' Cajuns,Louisiana,Sun Belt Conference
+107,Louisiana Tech Bulldogs,Louisiana Tech,Conference USA
+108,Louisville Cardinals,Louisville,Atlantic Coast Conference
+109,Maine Black Bears,Maine,Colonial Athletic Association
+110,Marist Red Foxes,Marist,Pioneer Football League
+111,Marshall Thundering Herd,Marshall,Sun Belt Conference
+112,Maryland Terrapins,Maryland,Big Ten Conference
+113,Massachusetts Minutemen,Massachusetts,Independent
+114,McNeese Cowboys,McNeese,Southland Conference
+115,Memphis Tigers,Memphis,American Athletic Conference
+116,Mercer Bears,Mercer,Southern Conference
+117,Merrimack Warriors,Merrimack,Northeast Conference
+118,Miami (OH) RedHawks,Miami (OH),Mid-American Conference
+119,Miami Hurricanes,Miami (FL),Atlantic Coast Conference
+120,Michigan State Spartans,Michigan State,Big Ten Conference
+121,Michigan Wolverines,Michigan,Big Ten Conference
+122,Middle Tennessee Blue Raiders,Middle Tennessee State,Conference USA
+123,Minnesota Golden Gophers,Minnesota,Big Ten Conference
+124,Mississippi State Bulldogs,Mississippi State,Southeastern Conference
+125,Mississippi Valley State Delta Devils,Mississippi Valley State,Southwestern Athletic Conference
+126,Missouri State Bears,Missouri State,Missouri Valley Football Conference
+127,Missouri Tigers,Missouri,Southeastern Conference
+128,Monmouth Hawks,Monmouth,Colonial Athletic Association
+129,Montana Grizzlies,Montana,Big Sky Conference
+130,Montana State Bobcats,Montana State,Big Sky Conference
+131,Morehead State Eagles,Morehead State,Pioneer Football League
+132,Morgan State Bears,Morgan State,Mid-Eastern Athletic Conference
+133,Murray State Racers,Murray State,Missouri Valley Football Conference
+134,NC State Wolfpack,North Carolina State,Atlantic Coast Conference
+135,Navy Midshipmen,Navy,American Athletic Conference
+136,Nebraska Cornhuskers,Nebraska,Big Ten Conference
+137,Nevada Wolf Pack,Nevada,Mountain West Conference
+138,New Hampshire Wildcats,New Hampshire,Colonial Athletic Association
+139,New Mexico Lobos,New Mexico,Mountain West Conference
+140,New Mexico State Aggies,New Mexico State,Conference USA
+141,Nicholls Colonels,Nicholls,Southland Conference
+142,Norfolk State Spartans,Norfolk State,Mid-Eastern Athletic Conference
+143,North Alabama Lions,North Alabama,United Athletic Conference
+144,North Carolina A&T Aggies,North Carolina A&T,Colonial Athletic Association
+145,North Carolina Central Eagles,North Carolina Central,Mid-Eastern Athletic Conference
+146,North Carolina Tar Heels,North Carolina,Atlantic Coast Conference
+147,North Dakota Fighting Hawks,North Dakota,Missouri Valley Football Conference
+148,North Dakota State Bison,North Dakota State,Missouri Valley Football Conference
+149,North Texas Mean Green,North Texas,American Athletic Conference
+150,Northern Arizona Lumberjacks,Northern Arizona,Big Sky Conference
+151,Northern Colorado Bears,Northern Colorado,Big Sky Conference
+152,Northern Illinois Huskies,Northern Illinois,Mid-American Conference
+153,Northern Iowa Panthers,Northern Iowa,Missouri Valley Football Conference
+154,Northwestern State Demons,Northwestern State,Southland Conference
+155,Northwestern Wildcats,Northwestern,Big Ten Conference
+156,Notre Dame Fighting Irish,Notre Dame,Independent
+157,Ohio Bobcats,Ohio,Mid-American Conference
+158,Ohio State Buckeyes,Ohio State,Big Ten Conference
+159,Oklahoma Sooners,Oklahoma,Big 12 Conference
+160,Oklahoma State Cowboys,Oklahoma State,Big 12 Conference
+161,Old Dominion Monarchs,Old Dominion,Sun Belt Conference
+162,Ole Miss Rebels,Ole Miss,Southeastern Conference
+163,Oregon Ducks,Oregon,Pacific 12 Conference
+164,Oregon State Beavers,Oregon State,Pacific 12 Conference
+165,Penn State Nittany Lions,Penn State,Big Ten Conference
+166,Pennsylvania Quakers,Pennsylvania,Ivy League
+167,Pittsburgh Panthers,Pitt,Atlantic Coast Conference
+168,Portland State Vikings,Portland State,Big Sky Conference
+169,Prairie View A&M Panthers,Prairie View A&M,Southwestern Athletic Conference
+170,Presbyterian Blue Hose,Presbyterian,Pioneer Football League
+171,Princeton Tigers,Princeton,Ivy League
+172,Purdue Boilermakers,Purdue,Big Ten Conference
+173,Rhode Island Rams,Rhode Island,Colonial Athletic Association
+174,Rice Owls,Rice,American Athletic Conference
+175,Richmond Spiders,Richmond,Colonial Athletic Association
+176,Robert Morris Colonials,Rober Morris,Big South-OVC
+177,Rutgers Scarlet Knights,Rutgers,Big Ten Conference
+178,SE Louisiana Lions,SE Louisiana,Southland Conference
+179,SMU Mustangs,SMU,American Athletic Conference
+180,Sacramento State Hornets,Sacremento State,Big Sky Conference
+181,Sacred Heart Pioneers,Sacred Heart,Northeast Conference
+182,Sam Houston Bearkats,Sam Houston,Conference USA
+183,Samford Bulldogs,Samford,Southern Conference
+184,San Diego State Aztecs,San Diego State,Mountain West Conference
+185,San Diego Toreros,San Diego,Pioneer Football League
+186,San Jose State Spartans,San Jose State,Mountain West Conference
+187,South Alabama Jaguars,South Alabama,Sun Belt Conference
+188,South Carolina Gamecocks,South Carolina,Southeastern Conference
+189,South Carolina State Bulldogs,South Carolina State,Mid-Eastern Athletic Conference
+190,South Dakota Coyotes,South Dakota,Missouri Valley Football Conference
+191,South Dakota State Jackrabbits,South Dakota State,Missouri Valley Football Conference
+192,South Florida Bulls,South Florida,American Athletic Conference
+193,Southeast Missouri State Redhawks,Southeast Missouri State,Big South-OVC
+194,Southern Illinois Salukis,Southern Illinois,Missouri Valley Football Conference
+195,Southern Jaguars,Southern,Southwestern Athletic Conference
+196,Southern Miss Golden Eagles,Southern Mississippi,Sun Belt Conference
+197,Southern Utah Thunderbirds,Southern Utah,United Athletic Conference
+198,St. Francis (PA) Red Flash,St. Francis (PA),Northeast Conference
+199,St. Thomas Minnesota Tommies,St. Thomas Minnesota,Pioneer Football League
+200,Stanford Cardinal,Stanford,Pacific 12 Conference
+201,Stephen F. Austin Lumberjacks,Stephen F. Austin,United Athletic Conference
+202,Stetson Hatters,Stetson,Pioneer Football League
+203,Stonehill Skyhawks,Stonehill,Northeast Conference
+204,Stony Brook Seawolves,Stony Brook,Colonial Athletic Association
+205,Syracuse Orange,Syracuse,Atlantic Coast Conference
+206,TCU Horned Frogs,Texas Christian,Big 12 Conference
+207,Tarleton State Texans,Tarleton,United Athletic Conference
+208,Temple Owls,Temple,American Athletic Conference
+209,Tennessee State Tigers,Tennessee State,Big South-OVC
+210,Tennessee Tech Golden Eagles,Tennessee Tech,Big South-OVC
+211,Tennessee Volunteers,Tennessee,Southeastern Conference
+212,Texas A&M Aggies,Texas A&M,Southeastern Conference
+213,Texas A&M Commerce Lions,Texas A&M Commerce,Southland Conference
+214,Texas Longhorns,Texas,Big 12 Conference
+215,Texas Southern Tigers,Texas Southern,Southwestern Athletic Conference
+216,Texas State Bobcats,Texas State,Sun Belt Conference
+217,Texas Tech Red Raiders,Texas Tech,Big 12 Conference
+218,The Citadel Bulldogs,The Citadel,Southern Conference
+219,Toledo Rockets,Toledo,Mid-American Conference
+220,Towson Tigers,Towson,Colonial Athletic Association
+221,Troy Trojans,Troy,Sun Belt Conference
+222,Tulane Green Wave,Tulane,American Athletic Conference
+223,Tulsa Golden Hurricane,Tulsa,American Athletic Conference
+224,UAB Blazers,UAB,American Athletic Conference
+225,UAlbany Great Danes,UAlbany,Colonial Athletic Association
+226,UC Davis Aggies,UC Davis,Big Sky Conference
+227,UCF Knights,UCF,Big 12 Conference
+228,UCLA Bruins,UCLA,Pacific 12 Conference
+229,UConn Huskies,Connecticut,Independent
+230,UL Monroe Warhawks,Louisiana-Monroe,Sun Belt Conference
+231,UNLV Rebels,Nevada-Las Vegas,Mountain West Conference
+232,USC Trojans,USC,Pacific 12 Conference
+233,UT Martin Skyhawks,UT Martin,Big South-OVC
+234,UTEP Miners,UTEP,Conference USA
+235,UTSA Roadrunners,UTSA,American Athletic Conference
+236,Utah State Aggies,Utah State,Mountain West Conference
+237,Utah Tech Trailblazers,Utah Tech,United Athletic Conference
+238,Utah Utes,Utah,Pacific 12 Conference
+239,VMI Keydets,VMI,Southern Conference
+240,Valparaiso Beacons,Valparaiso,Pioneer Football League
+241,Vanderbilt Commodores,Vanderbilt,Southeastern Conference
+242,Villanova Wildcats,Villanova,Colonial Athletic Association
+243,Virginia Cavaliers,Virginia,Atlantic Coast Conference
+244,Virginia Tech Hokies,Virginia Tech,Atlantic Coast Conference
+245,Wagner Seahawks,Wagner,Northeast Conference
+246,Wake Forest Demon Deacons,Wake Forest,Atlantic Coast Conference
+247,Washington Huskies,Washington,Pacific 12 Conference
+248,Washington State Cougars,Washington State,Pacific 12 Conference
+249,Weber State Wildcats,Weber State,Big Sky Conference
+250,West Virginia Mountaineers,West Virginia,Big 12 Conference
+251,Western Carolina Catamounts,Western Carolina,Southern Conference
+252,Western Illinois Leathernecks,Western Illinois,Missouri Valley Football Conference
+253,Western Kentucky Hilltoppers,Western Kentucky,Conference USA
+254,Western Michigan Broncos,Western Michigan,Mid-American Conference
+255,William & Mary Tribe,William & Mary,Colonial Athletic Association
+256,Wisconsin Badgers,Wisconsin,Big Ten Conference
+257,Wofford Terriers,Wofford,Southern Conference
+258,Wyoming Cowboys,Wyoming,Mountain West Conference
+259,Yale Bulldogs,Yale,Ivy League
+260,Youngstown State Penguins,Youngstown,Missouri Valley Football Conference
