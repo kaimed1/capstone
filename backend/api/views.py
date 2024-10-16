@@ -2,6 +2,7 @@ from django.http import HttpResponse, JsonResponse
 
 from api.methods.random_prediction import random_prediction as random_prediction_method
 from api.methods.random_forest_prediction import random_forest_prediction as random_forest_prediction_method
+from api.methods.chatgpt_prediction import chatgpt_prediction as chatgpt_prediction_method
 from api.helpers.get_end_of_season_standings import get_end_of_season_standings
 
 end_of_season_standings = get_end_of_season_standings()
@@ -68,3 +69,24 @@ def random_forest_prediction(request):
         return JsonResponse({
             "error": "Error occured when predicting game outcome"
         })
+
+# Predict using chatgpt
+def chatgpt_prediction(request):
+    # Get home team param
+    home_team = request.GET.get("home")
+
+    # Get away team param
+    away_team = request.GET.get("away")
+
+    # Make chatgpt prediction
+    winner_name, loser_name, winner_score, loser_score, prediction_error = chatgpt_prediction_method(home_team, away_team)
+
+    res = {
+        "winner_name": winner_name,
+        "loser_name": loser_name,
+        "winner_score": winner_score,
+        "loser_score": loser_score,
+        "error": prediction_error
+    }
+
+    return JsonResponse(res)
