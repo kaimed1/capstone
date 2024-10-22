@@ -28,7 +28,7 @@ def TrainModel(diff_stats, game_outcomes):
     X_train, X_test, y_train, y_test = train_test_split(diff_stats, game_outcomes, test_size=0.2, random_state=23)
 
     # Train the linear regression model
-    lin_reg_model = LinearRegression()
+    lin_reg_model = LinearRegression(positive=True)
     lin_reg_model.fit(X_train, y_train)
     return lin_reg_model, X_test, y_test
 
@@ -37,7 +37,7 @@ def TestModel(lin_reg_model, X_test, y_test):
     y_pred_continuous = lin_reg_model.predict(X_test)  # Continuous predictions
 
     # Convert continuous predictions to binary (0 or 1)
-    y_pred_binary = (y_pred_continuous > 0.5).astype(int)  # Thresholding at 0.5
+    y_pred_binary = (y_pred_continuous > 0.47).astype(int)  # Thresholding at 0.47 was most accurate between 0.4 and 0.6
 
     # Calculate accuracy
     accuracy = accuracy_score(y_test, y_pred_binary)
