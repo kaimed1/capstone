@@ -1,0 +1,46 @@
+teams
+-----------------------------------------------------------------
+| This table stores team information such as the                |
+| team name, school, and conference. It does not                |
+| store any statistics about the team.                          |
+-----------------------------------------------------------------
+|  Column    | Type    | Description                            |
+-----------------------------------------------------------------
+| team_id    | TEXT    | just an id (PK)                        |
+| team_name  | TEXT    | full name of the team                  |
+| school     | TEXT    | school name (matches sports reference) |
+| conference | TEXT    | conference name                        |
+-----------------------------------------------------------------
+
+team_stats
+----------------------------------------------------------
+| This table stores team statistics such as the team's   |
+| win-loss record, offensive and defensive ratings, and  |
+| other performance metrics. It only stores the most     |
+| recent statistics that are updated weekly. This table  |
+| is not used for training or for finding historical     |
+| data - only for making predictions for the current     |
+| week.                                                  |
+----------------------------------------------------------
+|  Column           | Type    | Description              |
+----------------------------------------------------------
+| team_id           | TEXT    | just an id (fk to teams) |
+| home_team         | integer | home team advantage bool |
+| prev_week_bye     | integer | previous week bye bool   |
+| running_avg_score | decimal | running average score    |
+| wins              | integer | number of wins           |
+| losses            | integer | number of losses         |
+| home_win_rate     | decimal | home win rate            |
+| away_win_rate     | decimal | away win rate            |
+| osrs              | decimal | offensive score rating   |
+| dsrs              | decimal | defensive score rating   |
+| srs               | decimal | total score rating       |
+| off_score         | decimal | offensive score          |
+| def_score         | decimal | defensive score          |
+| off_pass          | decimal | offensive pass           |
+| def_pass          | decimal | defensive pass           |
+| off_rush          | decimal | offensive rush           |
+| def_rush          | decimal | defensive rush           |
+| off_total         | decimal | offensive total          |
+| def_total         | decimal | defensive total          |
+----------------------------------------------------------
