@@ -50,9 +50,15 @@ python backend/manage.py runserver
 
 ### Example
 
-Making an http request to the following URL would make a random prediction for a Texas @ Oklahoma game.
+Making an http request to the following URL would make a random prediction for a game.\
 
-http://localhost:8000/api/random?home=Oklahoma_Sooners&away=Texas_Longhorns
+http://localhost:8000/api/random?home=1&away=2
+
+Note: the params home and away are team ids
+
+To get all teams including ids, use the following:
+
+http://localhost:8000/api/get_teams
 
 ## Predicting a Game with Baseline Random Forest Model
 
