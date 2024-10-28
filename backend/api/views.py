@@ -1,4 +1,5 @@
 from django.http import HttpResponse, JsonResponse
+from django.db import connection
 
 from api.methods.random_prediction import random_prediction as random_prediction_method
 from api.methods.random_forest_prediction import random_forest_prediction as random_forest_prediction_method
@@ -90,3 +91,17 @@ def chatgpt_prediction(request):
     }
 
     return JsonResponse(res)
+
+# Returns all teams with ids
+def get_teams(request):
+    cursor = connection.cursor()
+
+    # Select all teams
+    cursor.execute("SELECT * FROM teams")
+
+    # Get the actual rows
+    teams = cursor.fetchall()
+    
+    return JsonResponse({
+        'teams': teams
+    })
