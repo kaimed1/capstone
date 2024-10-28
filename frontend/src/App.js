@@ -2,93 +2,75 @@ import football from './football.png';
 import georgia from './georgia.png';
 import ohio from './ohio.png';
 import ou from './ou.png';
-import gator from './gator.png'
-import kansas from './Kansas.png'
-import rabbit from './rabbits.png'
-import graph from './graph.png'
-import pie from './pie.png'
+import gator from './gator.png';
+import kansas from './Kansas.png';
+import rabbit from './rabbits.png';
+import graph from './graph.png';
+import pie from './pie.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 function App() {
-  //Creates the input places for the user
-  const [homeTeam, setHomeTeam]= useState('');
+  const [homeTeam, setHomeTeam] = useState('');
   const [awayTeam, setAwayTeam] = useState('');
-
-  //handles input from user in each box
-  const handleInputChargeHome = (e) => {setHomeTeam(e.target.value.replace(/ /g, '_'))};
-  const handleInputChargeAway = (e) => {setAwayTeam(e.target.value.replace(/ /g, '_'))};
-  //Outputs the the user the terminal output
-  const [terminalOutput, setTerminalOutput] = useState("Fetching terminal output...");
-
-  //if the terminal is not fetching set the state to false
+  const [terminalOutput, setTerminalOutput] = useState('Fetching terminal output...');
   const [isFetching, setIsFetching] = useState(false);
 
-  //This is the function that fetches the terminal output from the server with the 
-  //get request to the API,
+  const handleInputChange = (setter) => (e) => {
+    setter(e.target.value.replace(/ /g, '_'));
+  };
+
   const fetchTerminalOutput = async () => {
     setIsFetching(true);
-
-    //Waits fo the response of the server with the winning team
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/random?home=${homeTeam}&away=${awayTeam}');
-      
+      const response = await fetch(`http://127.0.0.1:8000/api/random?home=${homeTeam}&away=${awayTeam}`);
       const data = await response.json();
-
       setTerminalOutput(`Winner: ${data.winner_name}`);
-
     } catch (error) {
-      setTerminalOutput("Error fetching terminal output.");
+      setTerminalOutput('Error fetching terminal output.');
     }
     setIsFetching(false);
   };
 
-  //This runs all the pictures and the website text and styling 
   return (
     <div className="App">
       <header className="multicolor-background">
-      <p className = "header-text">
-      NCAA Football Prediction
-      </p>
-      <button 
-        onClick={fetchTerminalOutput} 
-        style={{
-          padding: "10px 20px",
-          backgroundColor: isFetching ? "#888" : "#4CAF50",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer",
-          marginTop: "495px",
-        }}
-        disabled={isFetching}
-      >
-      
-        {isFetching ? "Calculating..." : "Calculate"}
-      </button>
+        <p className="header-text">NCAA Football Prediction</p>
 
-      <p>{terminalOutput}</p>
+        <div className="input-container">
+          <input
+            type="text"
+            value={homeTeam}
+            onChange={handleInputChange(setHomeTeam)}
+            placeholder="Home Team"
+          />
+          <input
+            type="text"
+            value={awayTeam}
+            onChange={handleInputChange(setAwayTeam)}
+            placeholder="Away Team"
+          />
+        </div>
 
-      <div class="hollow-circle"></div>
-      <img src={football} alt="logo" class = 'center-image' />
-      <img src={georgia} alt="Left Image" class="left-image"></img>
-      <img src={ohio} alt="Left Image" class="left-image-second"></img>
-      <img src={ou} alt="Left Image" class="left-image-last"></img>
-      <img src={gator} alt="Right Image" class="right-image"></img>
-      <img src={kansas} alt="Right Image" class="right-image-second"></img>
-      <img src={rabbit} alt="Right Image" class="right-image-last"></img>
-      <img src = {graph} alt = "graph" class = "graph-image"></img>
-      <img src = {pie} alt = "pie" class = "piechart-image"></img>
+        <button
+          onClick={fetchTerminalOutput}
+          className="myButton"
+          disabled={isFetching}
+        >
+          {isFetching ? 'Calculating...' : 'Calculate'}
+        </button>
 
-      
-      <input type = "text" id ="textbox" class = 'textbox' value = {homeTeam} onChange = {handleInputChargeHome} placeholder= "Home Team"/>
-      <input type = "text" id ="textbox" class = 'second-textbox' value = {awayTeam} onChange = {handleInputChargeAway} placeholder = "Away Team"/>
+        <p>{terminalOutput}</p>
 
+        {/* Image container with left, right, and center images */}
+      <div className="logo-grid">
+        <img src={football} alt="Football" className="center-football" />
+      </div>
       </header>
     </div>
   );
 }
 
-//Exports the app to a server running locally
 export default App;

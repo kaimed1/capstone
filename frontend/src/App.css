@@ -24,122 +24,39 @@
 
 /* Creates head banner */
 .header-text {
-  background-color: rgb(3, 3, 35); 
-  color: white; 
-  font-size: 40px; 
-  text-align: center; 
-  padding: 10px; 
-  font-weight: bold; 
-  position: absolute; 
-  top: 0; 
-  width: 100%; 
-  z-index: 1000; 
+  background-color: rgb(3, 3, 35);
+  color: white;
+  font-size: 40px;
+  padding: 10px;
+  font-weight: bold;
   width: 100%;
-  text-shadow: 
-    2px 2px 0px #000000, 
-    4px 4px 0px #888888, 
-    6px 6px 0px #444444; 
-}
-
-/* styling for an image on the website*/
-.left-image {
-  position: absolute; /* Keeps the image in a fixed position */
-  left: 0px; 
-  top: 110px; 
-  height: 100px;
-  width: 150px; 
-  background-color: rgb(130, 39, 39);
-  padding: 20px;
-}
-
-/* styling for the an image on the website*/
-.left-image-second {
-  position: absolute; 
-  left: 0px; 
-  top: 235px; 
-  height: 100px; 
-  width: 150px; 
-  background-color:  rgb(130, 39, 39);
-  padding: 20px;
-}
-
-/* styling for the left image on the website*/
-.left-image-last {
-  position: absolute; 
-  left: 0px; 
-  top: 360px; 
-  height: 100px; 
-  width: 150px; 
-  background-color:  rgb(130, 39, 39);
-  padding: 20px;
-}
-
-/* styling for the an image on the website*/
-.center-image{
-    position: absolute; 
-    left: 40%; 
-    top: 36%; 
-    height: 200px; 
-    width: 250px; 
-    rotate: 90deg;
-  }
-
-  /* Creates circle around football in center*/
-  .hollow-circle {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%; /* Makes it a circle */
-    background: linear-gradient(90deg, rgb(130, 39, 39)50%, rgb(87, 87, 153) 50%); /* Red to blue gradient */
-    position: absolute;
-}
-
-/* styling for the an image on the website*/
-.right-image {
-  position: absolute; 
-  right: 0px; 
-  top: 110px; 
-  height: 125px; 
-  width: 150px; 
-  background-color: rgb(87, 87, 153);
-  padding: 20px;
-}
-/* styling for the an image on the website*/
-.right-image-second {
-  position: absolute; 
-  right: 0px; 
-  top: 235px; 
-  height: 100px; 
-  width: 150px; 
-  background-color: rgb(87, 87, 153);
-  padding: 20px;
-}
-/* styling for the an image on the website*/
-.right-image-last {
-  position: absolute; 
-  right: 0px; 
-  top: 360px; 
-  height: 100px; 
-  width: 150px; 
-  background-color: rgb(87, 87, 153);
-  padding: 20px;
-}
-/* Position textbox */
-.textbox{
+  text-shadow: 2px 2px #000, 4px 4px #888, 6px 6px #444;
   position: absolute;
-  left:25%;
-  top: 80%;
+  top: 0;
+
 }
 
-/* Position textbox */
-.second-textbox{
-  position: absolute;
-  right: 25%;
-  top: 80%;
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input:focus {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 /*Creates the button for the user to click*/
 .myButton {
-  padding: 10px 20px;
+  padding: 20px 50px;
+  margin-top: 20px;
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -147,19 +64,44 @@
   cursor: pointer;
 }
 
-/* styling for the an image on the website*/
-.graph-image{
-  position: absolute; 
-  right: 150px; 
-  top: 100px; 
-  height: 250px; 
-  width: 270px; 
+/* Center the football image */
+.center-football {
+  width: 300px;
+  height: 250px;
+  rotate: 90deg;
+  padding:30px;
+  animation: bounce 2s infinite;
 }
-/* styling for the an image on the website*/
-.piechart-image{
-  position: absolute; 
-  left: 150px; 
-  top: 100px; 
-  height: 400px; 
-  width: 400px; 
+/* Simple bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
+@media (max-width: 768px) {
+  .center-football {
+    width: 300px;
+    height: 250px;
+    padding: 40px;
+  }
+
+  .input-container input {
+    width: 80%;
+    margin-bottom: 10px; /* Adds space between inputs for better mobile layout */
+  }
+
+  .myButton {
+    width: 80%; /* Adjusted for better usability on smaller screens */
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure it stacks well */
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    gap: 15px; /* Slightly smaller gap for mobile */
+  }
+}
+
