@@ -64,7 +64,7 @@ team_id,Team,School,Conference
 63,Florida International Panthers,Florida International,Conference USA
 64,Florida State Seminoles,Florida State,Atlantic Coast Conference
 65,Fordham Rams,Fordham,Patriot League
-66,Fresno State Bulldogs,Fresno,Mountain West Conference
+66,Fresno State Bulldogs,Fresno State,Mountain West Conference
 67,Furman Paladins,Furman,Southern Conference
 68,Gardner Webb Runnin' Bulldogs,Gardner Webb,Big South-OVC
 69,Georgetown Hoyas,Georgetown,Patriot League
@@ -75,7 +75,7 @@ team_id,Team,School,Conference
 74,Grambling Tigers,Grambling,Southwestern Athletic Conference
 75,Hampton Pirates,Hampton,Colonial Athletic Association
 76,Harvard Crimson,Harvard,Ivy League
-77,Hawai'i Rainbow Warriors,Hawai'i,Mountain West Conference
+77,Hawai'i Rainbow Warriors,Hawaii,Mountain West Conference
 78,Holy Cross Crusaders,Holy Cross,Patriot League
 79,Houston Christian Huskies,Houston Chrisian,Southland Conference
 80,Houston Cougars,Houston,Big 12 Conference
@@ -117,10 +117,10 @@ team_id,Team,School,Conference
 116,Mercer Bears,Mercer,Southern Conference
 117,Merrimack Warriors,Merrimack,Northeast Conference
 118,Miami (OH) RedHawks,Miami (OH),Mid-American Conference
-119,Miami Hurricanes,Miami,Atlantic Coast Conference
+119,Miami Hurricanes,Miami (FL),Atlantic Coast Conference
 120,Michigan State Spartans,Michigan State,Big Ten Conference
 121,Michigan Wolverines,Michigan,Big Ten Conference
-122,Middle Tennessee Blue Raiders,Middle Tennessee,Conference USA
+122,Middle Tennessee Blue Raiders,Middle Tennessee State,Conference USA
 123,Minnesota Golden Gophers,Minnesota,Big Ten Conference
 124,Mississippi State Bulldogs,Mississippi State,Southeastern Conference
 125,Mississippi Valley State Delta Devils,Mississippi Valley State,Southwestern Athletic Conference
@@ -132,7 +132,7 @@ team_id,Team,School,Conference
 131,Morehead State Eagles,Morehead State,Pioneer Football League
 132,Morgan State Bears,Morgan State,Mid-Eastern Athletic Conference
 133,Murray State Racers,Murray State,Missouri Valley Football Conference
-134,NC State Wolfpack,NC State,Atlantic Coast Conference
+134,NC State Wolfpack,North Carolina State,Atlantic Coast Conference
 135,Navy Midshipmen,Navy,American Athletic Conference
 136,Nebraska Cornhuskers,Nebraska,Big Ten Conference
 137,Nevada Wolf Pack,Nevada,Mountain West Conference
@@ -144,7 +144,7 @@ team_id,Team,School,Conference
 143,North Alabama Lions,North Alabama,United Athletic Conference
 144,North Carolina A&T Aggies,North Carolina A&T,Colonial Athletic Association
 145,North Carolina Central Eagles,North Carolina Central,Mid-Eastern Athletic Conference
-146,North Carolina Tar Heels,North Caronlina,Atlantic Coast Conference
+146,North Carolina Tar Heels,North Carolina,Atlantic Coast Conference
 147,North Dakota Fighting Hawks,North Dakota,Missouri Valley Football Conference
 148,North Dakota State Bison,North Dakota State,Missouri Valley Football Conference
 149,North Texas Mean Green,North Texas,American Athletic Conference
@@ -165,7 +165,7 @@ team_id,Team,School,Conference
 164,Oregon State Beavers,Oregon State,Pacific 12 Conference
 165,Penn State Nittany Lions,Penn State,Big Ten Conference
 166,Pennsylvania Quakers,Pennsylvania,Ivy League
-167,Pittsburgh Panthers,Pittsburgh,Atlantic Coast Conference
+167,Pittsburgh Panthers,Pitt,Atlantic Coast Conference
 168,Portland State Vikings,Portland State,Big Sky Conference
 169,Prairie View A&M Panthers,Prairie View A&M,Southwestern Athletic Conference
 170,Presbyterian Blue Hose,Presbyterian,Pioneer Football League
@@ -175,7 +175,7 @@ team_id,Team,School,Conference
 174,Rice Owls,Rice,American Athletic Conference
 175,Richmond Spiders,Richmond,Colonial Athletic Association
 176,Robert Morris Colonials,Rober Morris,Big South-OVC
-177,Rutgers Scarlet Knights,Rutgers Scarlet,Big Ten Conference
+177,Rutgers Scarlet Knights,Rutgers,Big Ten Conference
 178,SE Louisiana Lions,SE Louisiana,Southland Conference
 179,SMU Mustangs,SMU,American Athletic Conference
 180,Sacramento State Hornets,Sacremento State,Big Sky Conference
@@ -194,7 +194,7 @@ team_id,Team,School,Conference
 193,Southeast Missouri State Redhawks,Southeast Missouri State,Big South-OVC
 194,Southern Illinois Salukis,Southern Illinois,Missouri Valley Football Conference
 195,Southern Jaguars,Southern,Southwestern Athletic Conference
-196,Southern Miss Golden Eagles,Southern Miss,Sun Belt Conference
+196,Southern Miss Golden Eagles,Southern Mississippi,Sun Belt Conference
 197,Southern Utah Thunderbirds,Southern Utah,United Athletic Conference
 198,St. Francis (PA) Red Flash,St. Francis (PA),Northeast Conference
 199,St. Thomas Minnesota Tommies,St. Thomas Minnesota,Pioneer Football League
@@ -204,7 +204,7 @@ team_id,Team,School,Conference
 203,Stonehill Skyhawks,Stonehill,Northeast Conference
 204,Stony Brook Seawolves,Stony Brook,Colonial Athletic Association
 205,Syracuse Orange,Syracuse,Atlantic Coast Conference
-206,TCU Horned Frogs,TCU,Big 12 Conference
+206,TCU Horned Frogs,Texas Christian,Big 12 Conference
 207,Tarleton State Texans,Tarleton,United Athletic Conference
 208,Temple Owls,Temple,American Athletic Conference
 209,Tennessee State Tigers,Tennessee State,Big South-OVC
@@ -227,9 +227,9 @@ team_id,Team,School,Conference
 226,UC Davis Aggies,UC Davis,Big Sky Conference
 227,UCF Knights,UCF,Big 12 Conference
 228,UCLA Bruins,UCLA,Pacific 12 Conference
-229,UConn Huskies,UConn,Independent
-230,UL Monroe Warhawks,UL Monroe,Sun Belt Conference
-231,UNLV Rebels,UNLV,Mountain West Conference
+229,UConn Huskies,Connecticut,Independent
+230,UL Monroe Warhawks,Louisiana-Monroe,Sun Belt Conference
+231,UNLV Rebels,Nevada-Las Vegas,Mountain West Conference
 232,USC Trojans,USC,Pacific 12 Conference
 233,UT Martin Skyhawks,UT Martin,Big South-OVC
 234,UTEP Miners,UTEP,Conference USA
