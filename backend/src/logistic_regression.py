@@ -9,7 +9,7 @@ def ReadAndFormatData(file_path):
     df = pd.read_csv(file_path)
 
     # Split the data into features and target
-    features = df.drop(columns=['game_id', 'Result'])
+    features = df.drop(columns=['game_id', 'Team', 'Opponent', 'Result'])
     target = df['Result']
 
     # Create feature differences between every two rows (team matchups)
@@ -28,7 +28,7 @@ def TrainModel(diff_stats, game_outcomes):
     X_train, X_test, y_train, y_test = train_test_split(diff_stats, game_outcomes, test_size=0.2, random_state=23)
 
     # Train the logistic regression model
-    log_reg_model = LogisticRegressionCV(max_iter=2000) # Max_Iter set to 2000 becasue model does not converge within default value of 100
+    log_reg_model = LogisticRegressionCV(max_iter=2000, fit_intercept=True, solver='liblinear', refit=True) # max_iter set to 2000 becasue model does not converge within default value of 100
     log_reg_model.fit(X_train, y_train)
     return log_reg_model, X_test, y_test
 
