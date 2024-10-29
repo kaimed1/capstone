@@ -40,6 +40,12 @@ def TestModel(log_reg_model, X_test, y_test):
     accuracy = accuracy_score(y_test, y_pred)
     print(f'Logistic Regression Model Accuracy: {accuracy:.5f}')
 
+def SaveModel(log_reg_model):
+    # Save the logistic regression model using joblib
+    model_filename = 'backend/data/trained_models/logistic_regression_model.pkl'
+    joblib.dump(log_reg_model, model_filename)
+    print(f'Model saved to {model_filename}')
+
 def main():
     # Path to data to read in
     file_path = 'backend/data/Schedule_Stats.csv'
@@ -52,6 +58,9 @@ def main():
 
     # Test and evaluate accuracy
     TestModel(model, x, y)
+
+    # Save model
+    SaveModel(model)
 
 if __name__ == "__main__":
     main()
