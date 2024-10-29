@@ -74,10 +74,9 @@ def calc_accuracy(model, x, y):
 
 def train_save_model():
     """
-    This method loads the data, trains the Random Forest model, calculates the accuracy of the model, and saves the model.
+    This method loads the data, trains the Decision Tree model, calculates the accuracy of the model, and saves the model.
     """
-    #TODO: Need to change filename before put into git
-    filepath = "Training_Schedule.csv"
+    filepath = "../data/Training_Schedule.csv"
     global attribute_columns
     data, encoders = load_and_prepare_data(filepath)
 
@@ -93,8 +92,8 @@ def train_save_model():
 
     # Save the model and encoders
     #TODO: Need to change filename before put into git
-    joblib.dump(dt_model, 'dt_model_1.pkl')
-    joblib.dump(encoders, 'dt_encoders.pkl')
+    joblib.dump(dt_model, '../data/trained_models/dt_model_1.pkl')
+    joblib.dump(encoders, '../data/trained_models/dt_encoders.pkl')
 
 if __name__ == "__main__":
     train_save_model()
