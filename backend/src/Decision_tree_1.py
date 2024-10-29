@@ -19,7 +19,7 @@ attribute_columns = ['Team_encoded',
 
 # Configuration for the DecisionTree model
 dt_params = {
-    'max_depth': 20,
+    'max_depth': 8,
     'min_samples_split': 5,
 }
 
