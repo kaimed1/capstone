@@ -8,7 +8,9 @@ import Container from 'react-bootstrap/Container';
 import NavBar from './components/NavBar';
 
 // Import Pages
+import Home from './pages/Home';
 import Predictions from './pages/Predictions';
+import Rankings from './pages/Rankings';
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
     <NavBar /> {/* Navbar is outside Routes so it appears on all pages */}
     <Container>
     <Routes>
-      <Route path="/" element={<h1>home</h1>} />
+      <Route path="/" element={<Home />} />
       <Route path="/predictions" element={<Predictions />} />
+      <Route path="/rankings" element={<Rankings />} />
+      <Route path="*" element={<h1>Page not found!</h1>} />
     </Routes>
     </Container>
   </Router>
