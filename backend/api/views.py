@@ -4,10 +4,14 @@ from django.db import connection
 from api.methods.random_prediction import random_prediction as random_prediction_method
 from api.methods.random_forest_prediction import random_forest_prediction as random_forest_prediction_method
 from api.methods.chatgpt_prediction import chatgpt_prediction as chatgpt_prediction_method
+from api.methods.linear_regression_prediction import linear_regression_prediction as linear_regression_prediction_method
+from api.methods.logistic_regression_prediction import logistic_regression_prediction as logistic_regression_prediction_method
 from api.helpers.get_end_of_season_standings import get_end_of_season_standings
+from api.helpers.get_new_standings import get_new_standings
 from api.helpers.get_team_by_id import get_team_by_id
 
 end_of_season_standings = get_end_of_season_standings()
+advanced_standings = get_new_standings()
 
 def index(request):
     return HttpResponse("Index")
@@ -55,8 +59,8 @@ def random_forest_prediction(request):
     home_team = get_team_by_id(home_id)
     away_team = get_team_by_id(away_id)
 
-    home_team_standing = ""
-    away_team_standing = ""
+    home_team_standing = None
+    away_team_standing = None
 
     # Make sure team names are valid
     try:
@@ -66,7 +70,7 @@ def random_forest_prediction(request):
         return JsonResponse({
             "error": "Invalid team name"
         })
-    
+        
     try:
 
         # Make prediction using RF1 model
@@ -110,6 +114,72 @@ def chatgpt_prediction(request):
     res = {
         "winner_name": winner_name,
         "loser_name": loser_name,
+        "winner_score": winner_score,
+        "loser_score": loser_score,
+        "error": prediction_error
+    }
+
+    return JsonResponse(res)
+
+# Predict use linear regression model
+def linear_prediction(request):
+    # Get home team param
+    home_id = request.GET.get("home")
+
+    # Get away team param
+    away_id = request.GET.get("away")
+
+    home_team_standing = None
+    away_team_standing = None
+
+    # Make sure team names are valid
+    try:
+        home_team_standing = advanced_standings[int(home_id)]
+        away_team_standing = advanced_standings[int(away_id)]
+    except:
+        return JsonResponse({
+            "error": "Invalid team name"
+        })
+
+    # Make chatgpt prediction
+    winner, loser, winner_score, loser_score, prediction_error = linear_regression_prediction_method(home_team_standing, away_team_standing, home_id, away_id)
+
+    res = {
+        "winner": winner,
+        "loser": loser,
+        "winner_score": winner_score,
+        "loser_score": loser_score,
+        "error": prediction_error
+    }
+
+    return JsonResponse(res)
+
+# Predict use logistic regression model
+def logistic_prediction(request):
+    # Get home team param
+    home_id = request.GET.get("home")
+
+    # Get away team param
+    away_id = request.GET.get("away")
+
+    home_team_standing = None
+    away_team_standing = None
+
+    # Make sure team names are valid
+    try:
+        home_team_standing = advanced_standings[int(home_id)]
+        away_team_standing = advanced_standings[int(away_id)]
+    except:
+        return JsonResponse({
+            "error": "Invalid team name"
+        })
+
+    # Make chatgpt prediction
+    winner, loser, winner_score, loser_score, prediction_error = logistic_regression_prediction_method(home_team_standing, away_team_standing, home_id, away_id)
+
+    res = {
+        "winner": winner,
+        "loser": loser,
         "winner_score": winner_score,
         "loser_score": loser_score,
         "error": prediction_error
