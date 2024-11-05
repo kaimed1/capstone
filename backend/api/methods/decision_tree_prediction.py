@@ -1,7 +1,7 @@
 import pandas as pd
 import joblib
 
-def decision_tree_prediction(home_team, away_team):
+def decision_tree_prediction(home_team, away_team, home_id, away_id):
     '''
     :param home_team: String team playing at home
     :param away_team: String team playing away
@@ -52,8 +52,8 @@ def decision_tree_prediction(home_team, away_team):
     predictions = model.predict(new_game_df)
 
     #Assign winner and loser based on model prediction
-    winner_name = new_game["Team"] if predictions[0] == 1 else new_game["Opponent"]
-    loser_name = new_game["Opponent"] if predictions[0] == 1 else new_game["Team"]
+    winner = home_id if predictions[0] == 1 else away_id
+    loser = away_id if predictions[0] == 1 else home_id
 
     # Return winner and loser (-1 for the scores because this is not yet being used)
-    return winner_name, loser_name, -1, -1
+    return winner, loser, -1, -1
