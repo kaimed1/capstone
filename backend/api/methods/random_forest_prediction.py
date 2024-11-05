@@ -1,7 +1,7 @@
 import joblib
 import pandas as pd
 
-def random_forest_prediction(home_team_standing, away_team_standing):
+def random_forest_prediction(home_team_standing, away_team_standing, home_id, away_id):
 
     # Load model and encoders
     model = joblib.load('./backend/data/trained_models/rf_model_1.pkl')
@@ -46,8 +46,8 @@ def random_forest_prediction(home_team_standing, away_team_standing):
     # Make prediction
     predictions = model.predict(new_game_df)
 
-    winner_name = new_game["Team"] if predictions[0] == 1 else new_game["Opponent"]
-    loser_name = new_game["Opponent"] if predictions[0] == 1 else new_game["Team"]
+    winner = home_id if predictions[0] == 1 else away_id
+    loser = away_id if predictions[0] == 1 else home_id
 
     # Return winner and loser (-1 scores because we aren't predicting those yet)
-    return (winner_name, loser_name, -1, -1)
+    return (winner, loser, -1, -1)

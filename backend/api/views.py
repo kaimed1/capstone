@@ -36,11 +36,11 @@ def random_prediction(request):
         })
 
     # Make random prediction
-    winner_name, loser_name, winner_score, loser_score = random_prediction_method(home_team, away_team)
+    winner, loser, winner_score, loser_score = random_prediction_method(home_id, away_id)
 
     res = {
-        "winner_name": winner_name,
-        "loser_name": loser_name,
+        "winner": winner,
+        "loser": loser,
         "winner_score": winner_score,
         "loser_score": loser_score
     }
@@ -74,11 +74,11 @@ def random_forest_prediction(request):
     try:
 
         # Make prediction using RF1 model
-        winner_name, loser_name, winner_score, loser_score = random_forest_prediction_method(home_team_standing, away_team_standing)
+        winner, loser, winner_score, loser_score = random_forest_prediction_method(home_team_standing, away_team_standing, home_id, away_id)
 
         res = {
-            "winner_name": winner_name,
-            "loser_name": loser_name,
+            "winner": winner,
+            "loser": loser,
             "winner_score": winner_score,
             "loser_score": loser_score,
             "error": None
@@ -109,11 +109,11 @@ def chatgpt_prediction(request):
         })
 
     # Make chatgpt prediction
-    winner_name, loser_name, winner_score, loser_score, prediction_error = chatgpt_prediction_method(home_team, away_team)
+    winner, loser, winner_score, loser_score, prediction_error = chatgpt_prediction_method(home_team, away_team, home_id, away_id)
 
     res = {
-        "winner_name": winner_name,
-        "loser_name": loser_name,
+        "winner": winner,
+        "loser": loser,
         "winner_score": winner_score,
         "loser_score": loser_score,
         "error": prediction_error
@@ -199,4 +199,88 @@ def get_teams(request):
     
     return JsonResponse({
         'teams': teams
+    })
+
+# Returns all available prediction methods
+def get_prediction_methods(request):
+    return JsonResponse({
+        "prediction_methods": [
+            {
+            "name": "Flip a Coin",
+            "description": "a random prediction that is not based on any statistics",
+            "path": "api/random"
+        },
+        {
+            "name": "ChatGPT Prediction",
+            "description": "utilize ChatGPT to predict the outcome of a game",
+            "path": "api/chatgpt"
+        },
+        {
+            "name": "Random Forest Model",
+            "description": "a random forest model trained on season long statistics",
+            "path": "api/random_forest_2023"
+        },
+        {
+            "name": "Decision Tree Model",
+            "description": "a decision tree model trained on season long statistics",
+            "path": "api/random_forest_2023"
+        },
+        {
+            "name": "Linear Regression Model",
+            "description": "a linear regression model trained on season long statistics",
+            "path": "api/linear"
+        },
+        {
+            "name": "Logistic Regression Model",
+            "description": "a logistic regression model trained on season long statistics",
+            "path": "api/logistic"
+        }
+        ]
+    })
+
+# Returns all teams with ids and available prediciton methods (for frontend app initialization)
+def get_settings(request):
+
+    cursor = connection.cursor()
+
+    # Select all teams
+    cursor.execute("SELECT * FROM teams")
+
+    # Get the actual rows
+    teams = cursor.fetchall()
+
+    return JsonResponse({
+        "teams": teams,
+        "prediction_methods": [
+            {
+            "name": "Flip a Coin",
+            "description": "a random prediction that is not based on any statistics",
+            "path": "api/random"
+        },
+        {
+            "name": "ChatGPT Prediction",
+            "description": "utilize ChatGPT to predict the outcome of a game",
+            "path": "api/chatgpt"
+        },
+        {
+            "name": "Random Forest Model",
+            "description": "a random forest model trained on season long statistics",
+            "path": "api/random_forest_2023"
+        },
+        {
+            "name": "Decision Tree Model",
+            "description": "a decision tree model trained on season long statistics",
+            "path": "api/random_forest_2023"
+        },
+        {
+            "name": "Linear Regression Model",
+            "description": "a linear regression model trained on season long statistics",
+            "path": "api/linear"
+        },
+        {
+            "name": "Logistic Regression Model",
+            "description": "a logistic regression model trained on season long statistics",
+            "path": "api/logistic"
+        }
+        ]
     })
