@@ -10,9 +10,11 @@ from api.methods.logistic_regression_prediction import logistic_regression_predi
 from api.helpers.get_end_of_season_standings import get_end_of_season_standings
 from api.helpers.get_new_standings import get_new_standings
 from api.helpers.get_team_by_id import get_team_by_id
+from api.helpers.get_prediction_methods import get_prediction_methods as get_prediction_methods_helper
 
 end_of_season_standings = get_end_of_season_standings()
 advanced_standings = get_new_standings()
+prediction_methods = get_prediction_methods_helper()
 
 def index(request):
     return HttpResponse("Index")
@@ -249,38 +251,7 @@ def get_teams(request):
 # Returns all available prediction methods
 def get_prediction_methods(request):
     return JsonResponse({
-        "prediction_methods": [
-            {
-            "name": "Flip a Coin",
-            "description": "a random prediction that is not based on any statistics",
-            "path": "api/random"
-        },
-        {
-            "name": "ChatGPT Prediction",
-            "description": "utilize ChatGPT to predict the outcome of a game",
-            "path": "api/chatgpt"
-        },
-        {
-            "name": "Random Forest Model",
-            "description": "a random forest model trained on season long statistics",
-            "path": "api/random_forest_2023"
-        },
-        {
-            "name": "Decision Tree Model",
-            "description": "a decision tree model trained on season long statistics",
-            "path": "api/random_forest_2023"
-        },
-        {
-            "name": "Linear Regression Model",
-            "description": "a linear regression model trained on season long statistics",
-            "path": "api/linear"
-        },
-        {
-            "name": "Logistic Regression Model",
-            "description": "a logistic regression model trained on season long statistics",
-            "path": "api/logistic"
-        }
-        ]
+        "prediction_methods": prediction_methods
     })
 
 # Returns all teams with ids and available prediciton methods (for frontend app initialization)
@@ -296,36 +267,5 @@ def get_settings(request):
 
     return JsonResponse({
         "teams": teams,
-        "prediction_methods": [
-            {
-            "name": "Flip a Coin",
-            "description": "a random prediction that is not based on any statistics",
-            "path": "api/random"
-        },
-        {
-            "name": "ChatGPT Prediction",
-            "description": "utilize ChatGPT to predict the outcome of a game",
-            "path": "api/chatgpt"
-        },
-        {
-            "name": "Random Forest Model",
-            "description": "a random forest model trained on season long statistics",
-            "path": "api/random_forest_2023"
-        },
-        {
-            "name": "Decision Tree Model",
-            "description": "a decision tree model trained on season long statistics",
-            "path": "api/random_forest_2023"
-        },
-        {
-            "name": "Linear Regression Model",
-            "description": "a linear regression model trained on season long statistics",
-            "path": "api/linear"
-        },
-        {
-            "name": "Logistic Regression Model",
-            "description": "a logistic regression model trained on season long statistics",
-            "path": "api/logistic"
-        }
-        ]
+        "prediction_methods": prediction_methods
     })
