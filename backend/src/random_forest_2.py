@@ -34,14 +34,11 @@ def TrainModel(diff_stats, game_outcomes):
 
 def TestModel(random_forest_model, X_test, y_test):
     # Make predictions
-    y_pred_continuous = random_forest_model.predict(X_test)  # Continuous predictions
-
-    # Convert continuous predictions to binary (0 or 1)
-    y_pred_binary = (y_pred_continuous > 0.47).astype(int)  # Thresholding at 0.47 was most accurate between 0.4 and 0.6
+    y_pred = random_forest_model.predict(X_test) 
 
     # Calculate accuracy
-    accuracy = accuracy_score(y_test, y_pred_binary)
-    print(f'Linear Regression Model Accuracy: {accuracy:.5f}')
+    accuracy = accuracy_score(y_test, y_pred)
+    print(f'Random Forest Model Accuracy: {accuracy:.5f}')
 
 def SaveModel(random_forest_model):
     # Save the linear regression model using joblib
