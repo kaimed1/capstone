@@ -48,17 +48,60 @@ python backend/src/random_forest_1.py
 python backend/manage.py runserver
 ```
 
-### Example
-
-Making an http request to the following URL would make a random prediction for a game.\
-
-http://localhost:8000/api/random?home=1&away=2
-
-Note: the params home and away are team ids
+### All Routes
 
 To get all teams including ids, use the following:
 
+```
 http://localhost:8000/api/get_teams
+```
+
+To get all prediction methods:
+
+```
+http://localhost:8000/api/get_prediction_methods
+```
+
+To get all teams and prediction methods:
+
+```
+http://localhost:8000/api/get_settings
+```
+
+Generating a game prediction:
+
+```
+http://localhost:8000/api/{PREDICTION_METHOD}?home={HOME_TEAM_ID}&away={AWAY_TEAM_ID}
+```
+
+Available prediction methods:
+
+- random
+- random_forest
+- decision_tree
+- chatgpt
+- linear (linear regression)
+- logistic (logistic regresss)
+
+### Prediction Example
+
+Making an http request to the following URL would make a random prediction for a game:
+
+```
+http://localhost:8000/api/random?home=1&away=2
+```
+
+Response:
+
+```
+{
+    "winner": "2",
+    "loser": "1",
+    "winner_score": -1,
+    "loser_score": -1,
+    "error": null
+}
+```
 
 ## Predicting a Game with Baseline Random Forest Model
 

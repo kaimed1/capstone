@@ -6,7 +6,7 @@ from dotenv import dotenv_values
 config = dotenv_values("backend/.env")
 
 # chatgpt prediction
-def chatgpt_prediction(home_team_name, away_team_name):
+def chatgpt_prediction(home_team_name, away_team_name, home_id, away_id):
 
     try:
         # Set up request body
@@ -47,8 +47,8 @@ def chatgpt_prediction(home_team_name, away_team_name):
             raise Exception("Malformed response from chatgpt")
 
         # Extract values
-        winner_name = outcome_json["winner_name"]
-        loser_name = outcome_json["loser_name"]
+        winner_name = home_id if outcome_json["winner_name"] == home_team_name else away_id
+        loser_name = away_id if outcome_json["loser_name"] == away_team_name else home_id
         winner_score = outcome_json["winner_score"]
         loser_score = outcome_json["loser_score"]
 
