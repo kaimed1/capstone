@@ -17,10 +17,7 @@ CONFERENCE_ELO = {
     'Conference USA': 1300
 }
 
-def LoadTeams():
-    teams_file = 'backend/data/Teams.csv'
-    schedule_file = 'backend/data/Schedule_Stats.csv'
-
+def LoadTeams(teams_file, schedule_file):
     teams_df = pd.read_csv(teams_file)
     schedule_df = pd.read_csv(schedule_file)    
 
@@ -38,7 +35,7 @@ def CreateEloTable(teams, schedule):
 
     return elo_df
 
-def CalculateElo(elo, schedule):
+def CalculateElo(elo, schedule, save_path=None):
     schedule = schedule.iloc[::2]
     
     for game in schedule.itertuples(index=True):
@@ -57,9 +54,18 @@ def CalculateElo(elo, schedule):
     elo.sort_values(by='elo', ascending=False ,inplace=True)
     elo.reset_index(drop=True, inplace=True)
 
+    if(save_path):
+        elo.to_csv(save_path, index=True, index_label='Rank')
+
 def main():
-    teams, schedule = LoadTeams()
+    teams_file = 'backend/data/Teams.csv'
+    schedule_file = 'backend/data/Schedule_Stats.csv'
+
+    teams, schedule = LoadTeams(teams_file, schedule_file)
+    
     elo = CreateEloTable(teams, schedule)
-    CalculateElo(elo, schedule)
+    
+    output = 'backend/data/2023Elo.csv'
+    CalculateElo(elo, schedule, output)
 
 main()
