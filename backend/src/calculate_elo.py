@@ -1,4 +1,21 @@
 import pandas as pd
+import math
+
+ELO_K = 100
+
+CONFERENCE_ELO = {
+    'Atlantic Coast Conference': 1500,
+    'Big Ten Conference': 1500,
+    'Big 12 Conference': 1500,
+    'Independent': 1500,
+    'Pacific 12 Conference': 1500,
+    'Southeastern Conference': 1500,
+    'American Athletic Conference': 1400,
+    'Mid-American Conference': 1350,
+    'Mountain West Conference': 1350,
+    'Sun Belt Conference': 1350,
+    'Conference USA': 1300
+}
 
 def LoadTeams():
     teams_file = 'backend/data/Teams.csv'
@@ -17,19 +34,28 @@ def CreateEloTable(teams, schedule):
 
     elo_df = pd.merge(elo_df, teams[['team_id','School', 'Conference']], left_on='Team', right_on='team_id', how='left').drop(columns='team_id')
 
-    elo_df['elo'] = 1500
+    elo_df['elo'] = elo_df['Conference'].map(CONFERENCE_ELO).fillna(1500)
 
     return elo_df
 
 def CalculateElo(elo, schedule):
+    schedule = schedule.iloc[::2]
+    
     for game in schedule.itertuples(index=True):
-
-        delta = 30 if game.Result else -30
+        team_elo = int(elo.loc[elo['Team'] == game.Team, 'elo'].iloc[0])
+        opp_elo = int(elo.loc[elo['Team'] == game.Opponent, 'elo'].iloc[0])
         
-        elo['elo'] += (elo['Team'] == game.Team) * delta
+        e_team = 1 / (1 + 10 ** ((opp_elo - team_elo) / 400))
+        e_opp = 1 / (1 + 10 ** ((team_elo - opp_elo) / 400))
+
+        new_team = int(team_elo + ELO_K * (game.Result - e_team))
+        new_opp = int(opp_elo + ELO_K * ((1 - game.Result) - e_opp))
+
+        elo.loc[elo['Team'] == game.Team, 'elo'] = new_team
+        elo.loc[elo['Team'] == game.Opponent, 'elo'] = new_opp
     
     elo.sort_values(by='elo', ascending=False ,inplace=True)
-    elo.to_csv('backend/data/Elo.csv', index=False)
+    elo.reset_index(drop=True, inplace=True)
 
 def main():
     teams, schedule = LoadTeams()

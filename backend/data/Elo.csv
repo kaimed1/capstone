@@ -1,0 +1,133 @@
+Rank,Team,School,Conference,elo
+0,121,Michigan,Big Ten Conference,1965
+1,247,Washington,Pacific 12 Conference,1865
+2,70,Georgia,Southeastern Conference,1825
+3,5,Alabama,Southeastern Conference,1790
+4,214,Texas,Big 12 Conference,1769
+5,163,Oregon,Pacific 12 Conference,1768
+6,10,Arizona,Pacific 12 Conference,1760
+7,64,Florida State,Atlantic Coast Conference,1751
+8,127,Missouri,Southeastern Conference,1744
+9,162,Ole Miss,Southeastern Conference,1710
+10,158,Ohio State,Big Ten Conference,1699
+11,99,LSU,Southeastern Conference,1689
+12,38,Clemson,Atlantic Coast Conference,1688
+13,156,Notre Dame,Independent,1660
+14,95,Kansas State,Big 12 Conference,1629
+15,155,Northwestern,Big Ten Conference,1629
+16,165,Penn State,Big Ten Conference,1628
+17,159,Oklahoma,Big 12 Conference,1628
+18,160,Oklahoma State,Big 12 Conference,1627
+19,211,Tennessee,Southeastern Conference,1625
+20,134,North Carolina State,Atlantic Coast Conference,1621
+21,103,Liberty,Conference USA,1607
+22,89,Iowa,Big Ten Conference,1606
+23,250,West Virginia,Big 12 Conference,1590
+24,244,Virginia Tech,Atlantic Coast Conference,1586
+25,217,Texas Tech,Big 12 Conference,1581
+26,94,Kansas,Big 12 Conference,1580
+27,179,SMU,American Athletic Conference,1576
+28,115,Memphis,American Athletic Conference,1562
+29,235,UTSA,American Athletic Conference,1554
+30,112,Maryland,Big Ten Conference,1554
+31,118,Miami (OH),Mid-American Conference,1550
+32,73,Georgia Tech,Atlantic Coast Conference,1542
+33,232,USC,Pacific 12 Conference,1540
+34,8,Appalachian State,Sun Belt Conference,1538
+35,164,Oregon State,Pacific 12 Conference,1536
+36,51,Duke,Atlantic Coast Conference,1532
+37,221,Troy,Sun Belt Conference,1532
+38,39,Coastal Carolina,Sun Belt Conference,1531
+39,222,Tulane,American Athletic Conference,1531
+40,228,UCLA,Pacific 12 Conference,1531
+41,108,Louisville,Atlantic Coast Conference,1530
+42,90,Iowa State,Big 12 Conference,1528
+43,93,James Madison,Sun Belt Conference,1525
+44,238,Utah,Pacific 12 Conference,1519
+45,258,Wyoming,Mountain West Conference,1509
+46,157,Ohio,Mid-American Conference,1493
+47,219,Toledo,Mid-American Conference,1490
+48,98,Kentucky,Southeastern Conference,1487
+49,256,Wisconsin,Big Ten Conference,1487
+50,177,Rutgers,Big Ten Conference,1485
+51,29,California,Pacific 12 Conference,1477
+52,2,Air Force,Mountain West Conference,1469
+53,20,Boise State,Mountain West Conference,1465
+54,188,South Carolina,Southeastern Conference,1459
+55,146,North Carolina,Atlantic Coast Conference,1458
+56,212,Texas A&M,Southeastern Conference,1456
+57,119,Miami (FL),Atlantic Coast Conference,1452
+58,186,San Jose State,Mountain West Conference,1449
+59,84,Illinois,Big Ten Conference,1445
+60,21,Boston College,Atlantic Coast Conference,1444
+61,172,Purdue,Big Ten Conference,1433
+62,123,Minnesota,Big Ten Conference,1432
+63,216,Texas State,Sun Belt Conference,1431
+64,140,New Mexico State,Conference USA,1430
+65,120,Michigan State,Big Ten Conference,1426
+66,192,South Florida,American Athletic Conference,1423
+67,14,Auburn,Southeastern Conference,1415
+68,227,UCF,Big 12 Conference,1415
+69,231,Nevada-Las Vegas,Mountain West Conference,1407
+70,152,Northern Illinois,Mid-American Conference,1403
+71,253,Western Kentucky,Conference USA,1400
+72,92,Jacksonville State,Conference USA,1397
+73,66,Fresno State,Mountain West Conference,1397
+74,206,Texas Christian,Big 12 Conference,1396
+75,9,Arizona State,Pacific 12 Conference,1390
+76,187,South Alabama,Sun Belt Conference,1383
+77,62,Florida,Southeastern Conference,1383
+78,22,Bowling Green,Mid-American Conference,1366
+79,136,Nebraska,Big Ten Conference,1365
+80,11,Arkansas,Southeastern Conference,1363
+81,16,BYU,Big 12 Conference,1362
+82,124,Mississippi State,Southeastern Conference,1356
+83,205,Syracuse,Atlantic Coast Conference,1356
+84,200,Stanford,Pacific 12 Conference,1354
+85,72,Georgia State,Sun Belt Conference,1350
+86,248,Washington State,Pacific 12 Conference,1348
+87,161,Old Dominion,Sun Belt Conference,1348
+88,243,Virginia,Atlantic Coast Conference,1345
+89,135,Navy,American Athletic Conference,1343
+90,149,North Texas,American Athletic Conference,1337
+91,77,Hawaii,Mountain West Conference,1329
+92,174,Rice,American Athletic Conference,1328
+93,167,Pitt,Atlantic Coast Conference,1321
+94,111,Marshall,Sun Belt Conference,1320
+95,80,Houston,Big 12 Conference,1305
+96,246,Wake Forest,Atlantic Coast Conference,1299
+97,41,Colorado,Pacific 12 Conference,1295
+98,87,Indiana,Big Ten Conference,1293
+99,236,Utah State,Mountain West Conference,1288
+100,37,Cincinnati,Big 12 Conference,1279
+101,42,Colorado State,Mountain West Conference,1276
+102,17,Ball State,Mid-American Conference,1272
+103,57,Eastern Michigan,Mid-American Conference,1269
+104,12,Arkansas State,Sun Belt Conference,1268
+105,229,Connecticut,Independent,1266
+106,18,Baylor,Big 12 Conference,1258
+107,224,UAB,American Athletic Conference,1252
+108,33,Central Michigan,Mid-American Conference,1250
+109,254,Western Michigan,Mid-American Conference,1248
+110,106,Louisiana,Sun Belt Conference,1242
+111,71,Georgia Southern,Sun Belt Conference,1241
+112,241,Vanderbilt,Southeastern Conference,1221
+113,184,San Diego State,Mountain West Conference,1219
+114,223,Tulsa,American Athletic Conference,1216
+115,139,New Mexico,Mountain West Conference,1212
+116,26,Buffalo,Mid-American Conference,1201
+117,61,Florida Atlantic,American Athletic Conference,1195
+118,122,Middle Tennessee State,Conference USA,1192
+119,196,Southern Mississippi,Sun Belt Conference,1189
+120,35,Charlotte,American Athletic Conference,1183
+121,208,Temple,American Athletic Conference,1172
+122,182,Sam Houston,Conference USA,1158
+123,137,Nevada,Mountain West Conference,1153
+124,113,Massachusetts,Independent,1146
+125,234,UTEP,Conference USA,1120
+126,53,East Carolina,American Athletic Conference,1120
+127,63,Florida International,Conference USA,1105
+128,3,Akron,Mid-American Conference,1100
+129,107,Louisiana Tech,Conference USA,1056
+130,230,Louisiana-Monroe,Sun Belt Conference,1041
+131,97,Kent State,Mid-American Conference,1035
