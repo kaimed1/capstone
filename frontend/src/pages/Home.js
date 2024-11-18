@@ -1,21 +1,60 @@
-import { Row, Col } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
-function Home() {
-    return (
-        <div className="Home">
-        <Row>
-            <Col>
-            <h1>Home</h1>
+    function Home() {
+      const styles = {
+        // Full screen container
+        container: {
+          height: '100vh',
+          display: 'flex',
+        },
+        // Left section (black background) with centered text
+        leftSection: {
+          backgroundColor: 'black',
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flex: 1,
+          textAlign: 'center',
+        },
+        // Right section (white background) with centered text
+        rightSection: {
+          backgroundColor: 'white',
+          color: 'black',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flex: 1,
+          textAlign: 'center',
+        },
+      };
+    
+      return (
+        /*Will fit window to size of users screen*/
+        <Container fluid style={styles.container}>
+          {/* Left Section (this is the black background) */}
+          <Row style={{ flex: 1 }}>
+            <Col style={styles.leftSection}>
+              <div>
+                <h1>How To Use</h1>
+              </div>
             </Col>
-        </Row>
-        <Row>
-            <Col>
-            <p>Welcome to the Sports Prediction Service! Here you can get predictions for the next match of your favorite team. Select one of our various models, and then enter the matchup you'd like to predict! 
-            </p>
+    
+            {/* Right Section (this is the black white Background) */}
+            <Col style={styles.rightSection}>
+              <div>
+                <p>
+                  Navigate to the Predictions page and input the home team and the away team. Select a prediction model
+                  from the dropdown menu and press "Get Prediction" to see the winning team. The Rankings tab has the teams rankings 
+                  based on the analysis of all the data derived from various websites.
+                </p>
+              </div>
             </Col>
-        </Row>
-        </div>
-    );
-}
-
-export default Home;
+          </Row>
+        </Container>
+      );
+    }
+    
+    export default Predictions;
+    
