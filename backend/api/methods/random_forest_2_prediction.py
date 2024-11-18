@@ -12,10 +12,8 @@ def random_forest_2_prediction(home_team_standing, away_team_standing, home_id, 
     # Predict new game
     predictions = model.predict([new_game])
 
-    # 1 => home team wins, 0 => home team loses
-    result = (predictions[0] > 0.47).astype(int)
-
-    winner = home_id if result == 1 else away_id
-    loser = away_id if result == 1 else home_id
+    # Determine winner and loser 
+    winner = home_id if predictions[0] == 1 else away_id
+    loser = away_id if predictions[0] == 1 else home_id
 
     return winner, loser, -1, -1, None
