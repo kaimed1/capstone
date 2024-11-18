@@ -44,14 +44,12 @@ function Predictions() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
 
     // Make fetch request to backend to get prediction
     fetch(`http://localhost:8000/${formData.model}?home=${formData.homeTeam}&away=${formData.awayTeam}`, {
       method: 'GET',
     }).then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setPrediction(data);
       })
       .catch((error) => console.error("Error fetching prediction:", error));
