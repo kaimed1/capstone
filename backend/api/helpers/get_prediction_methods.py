@@ -19,7 +19,7 @@ def get_prediction_methods():
             {
                 "name": "Decision Tree Model",
                 "description": "a decision tree model trained on season long statistics",
-                "path": "api/random_forest_2023"
+                "path": "api/decision_tree"
             },
             {
                 "name": "Linear Regression Model",
