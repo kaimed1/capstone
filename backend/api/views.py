@@ -3,6 +3,7 @@ from django.db import connection
 
 from api.methods.random_prediction import random_prediction as random_prediction_method
 from api.methods.random_forest_prediction import random_forest_prediction as random_forest_prediction_method
+from api.methods.random_forest_2_prediction import random_forest_2_prediction as random_forest_2_prediction_method
 from api.methods.decision_tree_prediction import decision_tree_prediction as decision_tree_prediction_method
 from api.methods.chatgpt_prediction import chatgpt_prediction as chatgpt_prediction_method
 from api.methods.linear_regression_prediction import linear_regression_prediction as linear_regression_prediction_method
@@ -93,6 +94,39 @@ def random_forest_prediction(request):
             "error": "Error occured when predicting game outcome"
         })
 
+# Predict using random forest classifier model with advanced data
+def random_forest_2_prediction(request):
+    # Get home team param
+    home_id = request.GET.get("home")
+
+    # Get away team param
+    away_id = request.GET.get("away")
+
+    home_team_standing = None
+    away_team_standing = None
+
+    # Make sure team names are valid
+    try:
+        home_team_standing = advanced_standings[int(home_id)]
+        away_team_standing = advanced_standings[int(away_id)]
+    except:
+        return JsonResponse({
+            "error": "Invalid team name"
+        })
+
+    # Make random forest prediction
+    winner, loser, winner_score, loser_score, prediction_error = random_forest_2_prediction_method(home_team_standing, away_team_standing, home_id, away_id)
+
+    res = {
+        "winner": winner,
+        "loser": loser,
+        "winner_score": winner_score,
+        "loser_score": loser_score,
+        "error": prediction_error
+    }
+
+    return JsonResponse(res)
+
 # Predict using decision tree model
 def decision_tree_prediction(request):
      # Get home team param
@@ -135,7 +169,6 @@ def decision_tree_prediction(request):
         return JsonResponse({
             "error": "Error occured when predicting game outcome"
         })
-
 
 # Predict using chatgpt
 def chatgpt_prediction(request):
